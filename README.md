@@ -3,7 +3,7 @@
 |                     |                                             |
 | :------------------ | :------------------------------------------ |
 | `Thursday 19 Nov`   | Released, in class                          |
-| `Monday 30 Nov`     | Plan due, 11:59pm                           |
+| `Tuesday 24 Nov`    | Plan due, 11:59pm                           |
 | `Tuesday 1 Dec`     | Plan sign-off, in lab                       |
 | `Tuesday 8 Dec`     | Due 9:00am; presentation and code review    |
 | Points              | 16                                          |
@@ -116,7 +116,7 @@ tests`), and that the documents are complete. The repository needs at least
 
 ## What is due, and when
 
-- **Monday 30 November, by 11:59pm:** `docs/plan.md`. The instructor reads
+- **Tuesday 24 November, by 11:59pm:** `docs/plan.md`. The instructor reads
   it and posts a Plan sign-off issue, a checklist in which anything left
   unticked is what to change before you build that part. Questions about it
   can be settled in lab on Tuesday 1 December.
