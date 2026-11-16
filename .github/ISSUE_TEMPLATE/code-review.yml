@@ -1,0 +1,77 @@
+name: Code review and presentation
+description: Tuesday 8 December. Filled in by the instructor at the presentation and code review.
+title: "Final Capstone code review"
+labels: ["code review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Your instructor fills this in at your presentation and code review. You will be asked
+        about parts of your team, including any code an agent wrote for you, and should be able
+        to explain them without looking at them first.
+  - type: checkboxes
+    attributes:
+      label: Implementation, 7 points
+      description: Checked in the code and by running it.
+      options:
+        - label: Three or more agents, each with a written role that matches what it does in the log
+        - label: The agents connect as the plan says, and one agent checks another's work
+        - label: Two or more tools of the team's own, each with a docstring the model can act on
+        - label: Each tool that changes something asks the person first
+        - label: Each guardrail rejects a bad call with an error the model can act on
+        - label: The single agent has the same tools and works alone
+        - label: The student's own tests cover each tool and at least one guardrail, and pass
+  - type: input
+    attributes:
+      label: Implementation score, out of 7
+    validations:
+      required: true
+  - type: checkboxes
+    attributes:
+      label: Evaluation, 3 points
+      options:
+        - label: Six or more tasks, each run three times with the team and three alone
+        - label: Success is judged by the test the plan set, and each judgment is backed by the log
+        - label: Tokens and time are compared, and the two quoted runs explain an outcome
+  - type: input
+    attributes:
+      label: Evaluation score, out of 3
+    validations:
+      required: true
+  - type: checkboxes
+    attributes:
+      label: Presentation, 2 points
+      options:
+        - label: The task, the team and how its agents connect, explained so a classmate could follow
+        - label: A live run, and the evaluation table with what it shows about team against single agent
+  - type: input
+    attributes:
+      label: Presentation score, out of 2
+    validations:
+      required: true
+  - type: checkboxes
+    attributes:
+      label: Written reflection, 2 points
+      options:
+        - label: Whether the team beat one agent is answered from the evaluation table, cost included
+        - label: A real failure from the log is matched to a kind of multiagent failure and a design change
+        - label: Who this could harm names a concrete action, a concrete mistake and the guardrail
+        - label: The AI disclosure names the tool, what it was used for, and what was done with the output, or says "none"
+  - type: input
+    attributes:
+      label: Reflection score, out of 2
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Oral component, 2 points
+      description: Outcome is 2 (explained it), 1 (explained it with gaps), or 0 (could not).
+      value: |
+        | Asked about | Outcome |
+        | --- | --- |
+        |  |  |
+  - type: input
+    attributes:
+      label: Total, out of 16
+    validations:
+      required: true

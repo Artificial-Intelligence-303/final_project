@@ -1,0 +1,111 @@
+# Automated checks for the Final Capstone. Run them yourself with:
+#
+#     uv run gatorgrade --config gatorgrade.yml
+#
+# These are the same checks that run on GitHub when you push. They check
+# that the pieces are there. The presentation, the code review and the
+# reflection judge the design, and the final grade is determined by the
+# instructor.
+
+- description: "[COMMITS] The repository has at least 15 commits"
+  check: CountCommits
+  options:
+    count: 15
+
+- description: "[TEAM] The team has three agents, each with a written role"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_team.py::test_the_team_has_three_agents_with_roles
+
+- description: "[TEAM] The lead reaches the other agents"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_team.py::test_the_lead_reaches_the_others
+
+- description: "[TEAM] The team has two tools of its own"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_team.py::test_the_team_has_two_tools_of_its_own
+
+- description: "[SINGLE] The single agent works alone, with the same tools"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_team.py::test_the_single_agent_works_alone_with_the_same_tools
+
+- description: "[TESTS] You have at least one test file of your own"
+  check: CountCommandOutput
+  options:
+    command: ls tests/test_*.py
+    count: 3
+
+- description: "[TESTS] Every test passes"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest
+
+- description: "[RUN] Six tasks are listed in docs/tasks.txt"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_session.py::test_six_tasks_are_listed
+
+- description: "[RUN] Each task ran three times with the team and three alone"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_session.py::test_each_task_ran_three_times_each_way
+
+- description: "[RUN] A team run used more than one agent"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_session.py::test_a_team_run_used_more_than_one_agent
+
+- description: "[RUN] A person declined a change"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_session.py::test_a_person_declined_a_change
+
+- description: "[RUN] A guardrail rejected a call"
+  check: ExecuteCommand
+  options:
+    command: uv run pytest tests/test_session.py::test_a_guardrail_rejected_a_call
+
+- description: "[STYLE] The code follows the Google Python style guide"
+  check: ExecuteCommand
+  options:
+    command: uv run ruff check src tests
+
+- src/team.py:
+  - description: "[CODE] team.py has no TODO left"
+    check: MatchFileFragment
+    options:
+      fragment: "TODO"
+      count: 0
+      exact: true
+
+- docs/plan.md:
+  - description: "[PLAN] The plan has no TODO left"
+    check: MatchFileFragment
+    options:
+      fragment: "TODO"
+      count: 0
+      exact: true
+
+- docs/evaluation.md:
+  - description: "[EVALUATION] The evaluation has no TODO left"
+    check: MatchFileFragment
+    options:
+      fragment: "TODO"
+      count: 0
+      exact: true
+
+- docs/reflection.md:
+  - description: "[REFLECTION] The reflection has no TODO left"
+    check: MatchFileFragment
+    options:
+      fragment: "TODO"
+      count: 0
+      exact: true
+  - description: "[REFLECTION] The reflection meets the 400 word minimum"
+    check: CountFileWords
+    options:
+      count: 400
+      exact: false
