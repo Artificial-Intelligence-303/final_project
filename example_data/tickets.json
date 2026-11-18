@@ -1,0 +1,2102 @@
+[
+ {
+  "id": 1,
+  "from": "Tess",
+  "device": "Pixel 7a",
+  "subject": "Meal swipes",
+  "message": "Tried to pay with meal swipes and it took a swipe AND charged my card $11.25."
+ },
+ {
+  "id": 2,
+  "from": "Tess",
+  "device": "Pixel 7a",
+  "subject": "Menu",
+  "message": "Will the pho be back at North Market? Haven't seen it in a while."
+ },
+ {
+  "id": 3,
+  "from": "Nina",
+  "device": "Galaxy A54",
+  "subject": "Broken after update",
+  "message": "Updated this morning and now it shows the logo and then disappears. My roommate on iPhone is fine."
+ },
+ {
+  "id": 4,
+  "from": "Priya",
+  "device": "iPhone 15",
+  "subject": "Quick question",
+  "message": "Is there a reason the app keeps signing me out every time I close it? Then it won't let me back in without resetting my password."
+ },
+ {
+  "id": 5,
+  "from": "Andre",
+  "device": "Pixel 7a",
+  "subject": "Menu",
+  "message": "Will the pho be back at North Market? Haven't seen it in a while."
+ },
+ {
+  "id": 6,
+  "from": "Priya",
+  "device": "Galaxy A54",
+  "subject": "Thanks!",
+  "message": "Love the new menu photos, makes it easy to pick."
+ },
+ {
+  "id": 7,
+  "from": "Ravi",
+  "device": "Galaxy S23",
+  "subject": "Lost item",
+  "message": "Left my water bottle at North Market, is there a lost and found?"
+ },
+ {
+  "id": 8,
+  "from": "Zoe",
+  "device": "iPhone 13",
+  "subject": "Request",
+  "message": "Can we schedule an order for later in the day?"
+ },
+ {
+  "id": 9,
+  "from": "Kofi",
+  "device": "Pixel 8",
+  "subject": "Order problem",
+  "message": "Checkout page takes forever to load. Not failing, just slow, almost a minute."
+ },
+ {
+  "id": 10,
+  "from": "Eli",
+  "device": "iPhone 15",
+  "subject": "help!!",
+  "message": "verification code expired before it even arrived. now it says too many attempts. I just want lunch"
+ },
+ {
+  "id": 11,
+  "from": "Lucia",
+  "device": "Galaxy A54",
+  "subject": "Sign-in loop",
+  "message": "I log in, it shows the home screen for a second, then kicks me back to the login page. On Galaxy A54."
+ },
+ {
+  "id": 12,
+  "from": "Priya",
+  "device": "iPhone 15",
+  "subject": "Performance",
+  "message": "The app got really sluggish this month, every screen takes a few seconds."
+ },
+ {
+  "id": 13,
+  "from": "Sam",
+  "device": "Pixel 7a",
+  "subject": "Where's my food",
+  "message": "App said my a salad was ready at North Market, but nobody could find it on the shelf."
+ },
+ {
+  "id": 14,
+  "from": "Diego",
+  "device": "iPhone 13",
+  "subject": "Missing order",
+  "message": "Third time this week the app says ready and the order doesn't exist when I get there."
+ },
+ {
+  "id": 15,
+  "from": "Kofi",
+  "device": "Galaxy A54",
+  "subject": "Wasted trip",
+  "message": "App told me Ridge Commons serves breakfast till 11. They stopped at 10. Please fix the hours."
+ },
+ {
+  "id": 16,
+  "from": "Ravi",
+  "device": "iPhone SE",
+  "subject": "Happy",
+  "message": "Honestly the best dining app I've used, no complaints."
+ },
+ {
+  "id": 17,
+  "from": "Kofi",
+  "device": "Galaxy S23",
+  "subject": "Schedule",
+  "message": "Ridge Commons weekend hours in the app don't match the sign on the door at all."
+ },
+ {
+  "id": 18,
+  "from": "Omar",
+  "device": "Pixel 7a",
+  "subject": "Not working",
+  "message": "Login button does nothing. I tapped it like 20 times. Reinstalled, same thing."
+ },
+ {
+  "id": 19,
+  "from": "Lucia",
+  "device": "Pixel 7a",
+  "subject": "Charged twice",
+  "message": "My pad see ew order went through but my card shows two charges of $13.40. Please refund one."
+ },
+ {
+  "id": 20,
+  "from": "Diego",
+  "device": "iPhone 15",
+  "subject": "Order problem",
+  "message": "Checkout fails at the last step with 'payment could not be processed' every time I add a tip."
+ },
+ {
+  "id": 21,
+  "from": "Eli",
+  "device": "Galaxy A54",
+  "subject": "Nice update",
+  "message": "The new pickup screen is really clear, thanks for that."
+ },
+ {
+  "id": 22,
+  "from": "Andre",
+  "device": "iPhone 15",
+  "subject": "Pickup",
+  "message": "My order number wasn't on the screen at Elm Hall even though the app said it was ready 15 min ago."
+ },
+ {
+  "id": 23,
+  "from": "Grace",
+  "device": "OnePlus 12",
+  "subject": "Order problem",
+  "message": "Every time I tap 'add to order' the whole app shuts down. Started after updating. OnePlus 12."
+ },
+ {
+  "id": 24,
+  "from": "Sam",
+  "device": "Galaxy S23",
+  "subject": "Happy",
+  "message": "Honestly the best dining app I've used, no complaints."
+ },
+ {
+  "id": 25,
+  "from": "Zoe",
+  "device": "Pixel 7a",
+  "subject": "Wasted trip",
+  "message": "App told me Ridge Commons serves breakfast till 11. They stopped at 10. Please fix the hours."
+ },
+ {
+  "id": 26,
+  "from": "Mei",
+  "device": "Pixel 7a",
+  "subject": "help!!",
+  "message": "verification code expired before it even arrived. now it says too many attempts. I just want lunch"
+ },
+ {
+  "id": 27,
+  "from": "Hana",
+  "device": "Galaxy A54",
+  "subject": "Nice update",
+  "message": "The new pickup screen is really clear, thanks for that."
+ },
+ {
+  "id": 28,
+  "from": "Jordan",
+  "device": "Pixel 7a",
+  "subject": "Hours wrong",
+  "message": "The app said Ridge Commons was open until 9 but it was dark at 7:30. Walked over for nothing."
+ },
+ {
+  "id": 29,
+  "from": "Zoe",
+  "device": "OnePlus 12",
+  "subject": "Closed??",
+  "message": "Ridge Commons shows open on Sunday mornings in the app but the doors say closed until noon."
+ },
+ {
+  "id": 30,
+  "from": "Mei",
+  "device": "iPhone SE",
+  "subject": "Lost item",
+  "message": "Left my water bottle at Elm Hall, is there a lost and found?"
+ },
+ {
+  "id": 31,
+  "from": "Eli",
+  "device": "Galaxy A54",
+  "subject": "Nice update",
+  "message": "The new pickup screen is really clear, thanks for that."
+ },
+ {
+  "id": 32,
+  "from": "Grace",
+  "device": "iPhone 13",
+  "subject": "Sign-in loop",
+  "message": "I log in, it shows the home screen for a second, then kicks me back to the login page. On iPhone 13."
+ },
+ {
+  "id": 33,
+  "from": "Omar",
+  "device": "iPhone 15",
+  "subject": "Laggy",
+  "message": "Scrolling the menu stutters and freezes for a few seconds. iPhone 15."
+ },
+ {
+  "id": 34,
+  "from": "Andre",
+  "device": "OnePlus 12",
+  "subject": "??",
+  "message": "App won't stay open on my OnePlus 12 since yesterday's update. Cleared cache, didn't help."
+ },
+ {
+  "id": 35,
+  "from": "Eli",
+  "device": "Galaxy A54",
+  "subject": "Great app",
+  "message": "Ordering ahead at North Market saves me so much time between classes. Works great on my Galaxy A54."
+ },
+ {
+  "id": 36,
+  "from": "Hana",
+  "device": "iPhone 13",
+  "subject": "Laggy",
+  "message": "Scrolling the menu stutters and freezes for a few seconds. iPhone 13."
+ },
+ {
+  "id": 37,
+  "from": "Eli",
+  "device": "Galaxy S23",
+  "subject": "Wishlist",
+  "message": "A widget that shows which hall has the shortest line would be amazing."
+ },
+ {
+  "id": 38,
+  "from": "Hana",
+  "device": "iPhone 13",
+  "subject": "Event",
+  "message": "Does the app list catering for club events?"
+ },
+ {
+  "id": 39,
+  "from": "Priya",
+  "device": "Galaxy S23",
+  "subject": "Order problem",
+  "message": "Every time I tap 'add to order' the whole app shuts down. Started after updating. Galaxy S23."
+ },
+ {
+  "id": 40,
+  "from": "Hana",
+  "device": "Galaxy A54",
+  "subject": "Broken after update",
+  "message": "Updated this morning and now it shows the logo and then disappears. My roommate on iPhone is fine."
+ },
+ {
+  "id": 41,
+  "from": "Sam",
+  "device": "iPhone SE",
+  "subject": "Great app",
+  "message": "Ordering ahead at North Market saves me so much time between classes. Works great on my iPhone SE."
+ },
+ {
+  "id": 42,
+  "from": "Andre",
+  "device": "Pixel 8",
+  "subject": "??",
+  "message": "App won't stay open on my Pixel 8 since yesterday's update. Cleared cache, didn't help."
+ },
+ {
+  "id": 43,
+  "from": "Priya",
+  "device": "iPhone SE",
+  "subject": "Nice update",
+  "message": "The new pickup screen is really clear, thanks for that."
+ },
+ {
+  "id": 44,
+  "from": "Kofi",
+  "device": "Pixel 8",
+  "subject": "Hours wrong",
+  "message": "The app said Ridge Commons was open until 9 but it was dark at 7:30. Walked over for nothing."
+ },
+ {
+  "id": 45,
+  "from": "Grace",
+  "device": "Galaxy S23",
+  "subject": "Loading forever",
+  "message": "Spinning wheel every time I open the app between classes, campus wifi is fine for everything else."
+ },
+ {
+  "id": 46,
+  "from": "Eli",
+  "device": "Galaxy S23",
+  "subject": "App closes",
+  "message": "Since the 4.2 update, the app closes as soon as I open the menu for Elm Hall. Galaxy S23."
+ },
+ {
+  "id": 47,
+  "from": "Lucia",
+  "device": "iPhone 13",
+  "subject": "Account issue",
+  "message": "After I changed my password on the college portal, the app won't accept either the old or the new one."
+ },
+ {
+  "id": 48,
+  "from": "Andre",
+  "device": "Galaxy S23",
+  "subject": "Order problem",
+  "message": "Every time I tap 'add to order' the whole app shuts down. Started after updating. Galaxy S23."
+ },
+ {
+  "id": 49,
+  "from": "Omar",
+  "device": "Pixel 7a",
+  "subject": "Order problem",
+  "message": "Placed a pickup order for Ridge Commons at 8pm because the app said open, the order just sat there. They close at 7 now."
+ },
+ {
+  "id": 50,
+  "from": "Zoe",
+  "device": "iPhone SE",
+  "subject": "Quick question",
+  "message": "Why does Apple Pay just close the payment sheet without paying? I end up paying at the counter."
+ },
+ {
+  "id": 51,
+  "from": "Sam",
+  "device": "Galaxy S23",
+  "subject": "Wasted trip",
+  "message": "App told me Ridge Commons serves breakfast till 11. They stopped at 10. Please fix the hours."
+ },
+ {
+  "id": 52,
+  "from": "Hana",
+  "device": "iPhone 13",
+  "subject": "Accessibility",
+  "message": "Bigger text option please, the menu font is tiny."
+ },
+ {
+  "id": 53,
+  "from": "Nina",
+  "device": "Pixel 8",
+  "subject": "Lost item",
+  "message": "Left my water bottle at North Market, is there a lost and found?"
+ },
+ {
+  "id": 54,
+  "from": "Tess",
+  "device": "OnePlus 12",
+  "subject": "Account issue",
+  "message": "After I changed my password on the college portal, the app won't accept either the old or the new one."
+ },
+ {
+  "id": 55,
+  "from": "Diego",
+  "device": "iPhone 13",
+  "subject": "Suggestion",
+  "message": "Could you add dark mode? The app is blinding at night."
+ },
+ {
+  "id": 56,
+  "from": "Zoe",
+  "device": "iPhone 13",
+  "subject": "Locked out",
+  "message": "The two-step code never shows up in my texts, so I can't get past the sign in screen. I waited ten minutes."
+ },
+ {
+  "id": 57,
+  "from": "Eli",
+  "device": "iPhone 13",
+  "subject": "Locked out",
+  "message": "The two-step code never shows up in my texts, so I can't get past the sign in screen. I waited ten minutes."
+ },
+ {
+  "id": 58,
+  "from": "Ravi",
+  "device": "Pixel 8",
+  "subject": "Nutrition",
+  "message": "Please show calories and allergens on each menu item."
+ },
+ {
+  "id": 59,
+  "from": "Diego",
+  "device": "Galaxy S23",
+  "subject": "Suggestion",
+  "message": "Could you add dark mode? The app is blinding at night."
+ },
+ {
+  "id": 60,
+  "from": "Hana",
+  "device": "iPhone 13",
+  "subject": "Account issue",
+  "message": "After I changed my password on the college portal, the app won't accept either the old or the new one."
+ },
+ {
+  "id": 61,
+  "from": "Mei",
+  "device": "iPhone 13",
+  "subject": "Wishlist",
+  "message": "A widget that shows which hall has the shortest line would be amazing."
+ },
+ {
+  "id": 62,
+  "from": "Sam",
+  "device": "Galaxy S23",
+  "subject": "Feature request",
+  "message": "Let us split an order with a friend."
+ },
+ {
+  "id": 63,
+  "from": "Kofi",
+  "device": "Pixel 8",
+  "subject": "Order problem",
+  "message": "Got the 'ready for pickup' notification, went to The Grill on Main, staff said the order never printed in the kitchen."
+ },
+ {
+  "id": 64,
+  "from": "Kofi",
+  "device": "Pixel 8",
+  "subject": "Charged twice",
+  "message": "My pad see ew order went through but my card shows two charges of $11.25. Please refund one."
+ },
+ {
+  "id": 65,
+  "from": "Mei",
+  "device": "iPhone 13",
+  "subject": "Suggestion",
+  "message": "Could you add dark mode? The app is blinding at night."
+ },
+ {
+  "id": 66,
+  "from": "Sam",
+  "device": "Galaxy A54",
+  "subject": "Broken after update",
+  "message": "Updated this morning and now it shows the logo and then disappears. My roommate on iPhone is fine."
+ },
+ {
+  "id": 67,
+  "from": "Nina",
+  "device": "Pixel 7a",
+  "subject": "Meal swipes",
+  "message": "Tried to pay with meal swipes and it took a swipe AND charged my card $11.25."
+ },
+ {
+  "id": 68,
+  "from": "Andre",
+  "device": "iPhone 15",
+  "subject": "Can't log in",
+  "message": "I type my campus email and password and it just spins and then says 'something went wrong'. Tried three times this morning."
+ },
+ {
+  "id": 69,
+  "from": "Omar",
+  "device": "Pixel 7a",
+  "subject": "Order problem",
+  "message": "Every time I tap 'add to order' the whole app shuts down. Started after updating. Pixel 7a."
+ },
+ {
+  "id": 70,
+  "from": "Omar",
+  "device": "iPhone 15",
+  "subject": "Refund?",
+  "message": "Cancelled my order before it was made and I still haven't gotten the $6.75 back, it's been a week."
+ },
+ {
+  "id": 71,
+  "from": "Ravi",
+  "device": "Pixel 8",
+  "subject": "Sign-in loop",
+  "message": "I log in, it shows the home screen for a second, then kicks me back to the login page. On Pixel 8."
+ },
+ {
+  "id": 72,
+  "from": "Grace",
+  "device": "Galaxy A54",
+  "subject": "Wishlist",
+  "message": "A widget that shows which hall has the shortest line would be amazing."
+ },
+ {
+  "id": 73,
+  "from": "Lucia",
+  "device": "OnePlus 12",
+  "subject": "Thanks!",
+  "message": "Love the new menu photos, makes it easy to pick."
+ },
+ {
+  "id": 74,
+  "from": "Ravi",
+  "device": "Galaxy A54",
+  "subject": "Missing order",
+  "message": "Third time this week the app says ready and the order doesn't exist when I get there."
+ },
+ {
+  "id": 75,
+  "from": "Sam",
+  "device": "Galaxy S23",
+  "subject": "Laggy",
+  "message": "Scrolling the menu stutters and freezes for a few seconds. Galaxy S23."
+ },
+ {
+  "id": 76,
+  "from": "Diego",
+  "device": "Galaxy S23",
+  "subject": "Kudos",
+  "message": "The staff at The Grill on Main were so nice when I picked up today."
+ },
+ {
+  "id": 77,
+  "from": "Grace",
+  "device": "iPhone 15",
+  "subject": "Great app",
+  "message": "Ordering ahead at Elm Hall saves me so much time between classes. Works great on my iPhone 15."
+ },
+ {
+  "id": 78,
+  "from": "Omar",
+  "device": "iPhone 15",
+  "subject": "Quick question",
+  "message": "Why does Apple Pay just close the payment sheet without paying? I end up paying at the counter."
+ },
+ {
+  "id": 79,
+  "from": "Nina",
+  "device": "Pixel 8",
+  "subject": "Order problem",
+  "message": "Placed a pickup order for Ridge Commons at 8pm because the app said open, the order just sat there. They close at 7 now."
+ },
+ {
+  "id": 80,
+  "from": "Omar",
+  "device": "Galaxy A54",
+  "subject": "Order problem",
+  "message": "Checkout fails at the last step with 'payment could not be processed' every time I add a tip."
+ },
+ {
+  "id": 81,
+  "from": "Ravi",
+  "device": "OnePlus 12",
+  "subject": "help!!",
+  "message": "verification code expired before it even arrived. now it says too many attempts. I just want lunch"
+ },
+ {
+  "id": 82,
+  "from": "Diego",
+  "device": "iPhone 15",
+  "subject": "Order problem",
+  "message": "Placed a pickup order for Ridge Commons at 8pm because the app said open, the order just sat there. They close at 7 now."
+ },
+ {
+  "id": 83,
+  "from": "Nina",
+  "device": "Galaxy S23",
+  "subject": "Suggestion",
+  "message": "Could you add dark mode? The app is blinding at night."
+ },
+ {
+  "id": 84,
+  "from": "Kofi",
+  "device": "Galaxy S23",
+  "subject": "Charged twice",
+  "message": "My pad see ew order went through but my card shows two charges of $8.50. Please refund one."
+ },
+ {
+  "id": 85,
+  "from": "Omar",
+  "device": "Pixel 8",
+  "subject": "App closes",
+  "message": "Since the 4.2 update, the app closes as soon as I open the menu for Elm Hall. Pixel 8."
+ },
+ {
+  "id": 86,
+  "from": "Priya",
+  "device": "Galaxy A54",
+  "subject": "Refund?",
+  "message": "Cancelled my order before it was made and I still haven't gotten the $6.75 back, it's been a week."
+ },
+ {
+  "id": 87,
+  "from": "Eli",
+  "device": "Pixel 7a",
+  "subject": "Can't log in",
+  "message": "I type my campus email and password and it just spins and then says 'something went wrong'. Tried three times this morning."
+ },
+ {
+  "id": 88,
+  "from": "Tess",
+  "device": "Pixel 8",
+  "subject": "Loading forever",
+  "message": "Spinning wheel every time I open the app between classes, campus wifi is fine for everything else."
+ },
+ {
+  "id": 89,
+  "from": "Kofi",
+  "device": "Pixel 8",
+  "subject": "Charged twice",
+  "message": "My a chicken wrap order went through but my card shows two charges of $11.25. Please refund one."
+ },
+ {
+  "id": 90,
+  "from": "Lucia",
+  "device": "Galaxy A54",
+  "subject": "Card declined",
+  "message": "It says my card was declined but it works everywhere else, and the bank says no attempt reached them."
+ },
+ {
+  "id": 91,
+  "from": "Priya",
+  "device": "iPhone SE",
+  "subject": "Idea",
+  "message": "It would be great to save a favorite order so I don't rebuild my the pho every time."
+ },
+ {
+  "id": 92,
+  "from": "Tess",
+  "device": "Galaxy A54",
+  "subject": "Question",
+  "message": "Is The Grill on Main hiring student workers this semester?"
+ },
+ {
+  "id": 93,
+  "from": "Andre",
+  "device": "iPhone SE",
+  "subject": "Quick question",
+  "message": "Is there a reason the app keeps signing me out every time I close it? Then it won't let me back in without resetting my password."
+ },
+ {
+  "id": 94,
+  "from": "Kofi",
+  "device": "Pixel 7a",
+  "subject": "Request",
+  "message": "Can we schedule an order for later in the day?"
+ },
+ {
+  "id": 95,
+  "from": "Zoe",
+  "device": "iPhone 15",
+  "subject": "Thanks!",
+  "message": "Love the new menu photos, makes it easy to pick."
+ },
+ {
+  "id": 96,
+  "from": "Sam",
+  "device": "Galaxy S23",
+  "subject": "Performance",
+  "message": "The app got really sluggish this month, every screen takes a few seconds."
+ },
+ {
+  "id": 97,
+  "from": "Nina",
+  "device": "iPhone 13",
+  "subject": "Thanks!",
+  "message": "Love the new menu photos, makes it easy to pick."
+ },
+ {
+  "id": 98,
+  "from": "Lucia",
+  "device": "iPhone 13",
+  "subject": "Meal swipes",
+  "message": "Tried to pay with meal swipes and it took a swipe AND charged my card $13.40."
+ },
+ {
+  "id": 99,
+  "from": "Zoe",
+  "device": "OnePlus 12",
+  "subject": "Wishlist",
+  "message": "A widget that shows which hall has the shortest line would be amazing."
+ },
+ {
+  "id": 100,
+  "from": "Hana",
+  "device": "Pixel 7a",
+  "subject": "Nice update",
+  "message": "The new pickup screen is really clear, thanks for that."
+ },
+ {
+  "id": 101,
+  "from": "Priya",
+  "device": "Galaxy A54",
+  "subject": "Accessibility",
+  "message": "Bigger text option please, the menu font is tiny."
+ },
+ {
+  "id": 102,
+  "from": "Jordan",
+  "device": "Galaxy S23",
+  "subject": "Loading forever",
+  "message": "Spinning wheel every time I open the app between classes, campus wifi is fine for everything else."
+ },
+ {
+  "id": 103,
+  "from": "Andre",
+  "device": "iPhone SE",
+  "subject": "Laggy",
+  "message": "Scrolling the menu stutters and freezes for a few seconds. iPhone SE."
+ },
+ {
+  "id": 104,
+  "from": "Nina",
+  "device": "Pixel 7a",
+  "subject": "Performance",
+  "message": "The app got really sluggish this month, every screen takes a few seconds."
+ },
+ {
+  "id": 105,
+  "from": "Nina",
+  "device": "Galaxy S23",
+  "subject": "Order problem",
+  "message": "Every time I tap 'add to order' the whole app shuts down. Started after updating. Galaxy S23."
+ },
+ {
+  "id": 106,
+  "from": "Zoe",
+  "device": "iPhone 15",
+  "subject": "Nutrition",
+  "message": "Please show calories and allergens on each menu item."
+ },
+ {
+  "id": 107,
+  "from": "Mei",
+  "device": "iPhone 15",
+  "subject": "Great app",
+  "message": "Ordering ahead at Elm Hall saves me so much time between classes. Works great on my iPhone 15."
+ },
+ {
+  "id": 108,
+  "from": "Andre",
+  "device": "iPhone 13",
+  "subject": "Happy",
+  "message": "Honestly the best dining app I've used, no complaints."
+ },
+ {
+  "id": 109,
+  "from": "Mei",
+  "device": "Pixel 7a",
+  "subject": "Order problem",
+  "message": "Every time I tap 'add to order' the whole app shuts down. Started after updating. Pixel 7a."
+ },
+ {
+  "id": 110,
+  "from": "Nina",
+  "device": "Pixel 7a",
+  "subject": "Crash",
+  "message": "Crashes on launch now. Was fine last week before the update. Pixel 7a, Android 14."
+ },
+ {
+  "id": 111,
+  "from": "Priya",
+  "device": "Galaxy A54",
+  "subject": "Not received",
+  "message": "The app marked my the pho complete, but it was never on the pickup shelf and nobody at The Grill on Main had it."
+ },
+ {
+  "id": 112,
+  "from": "Lucia",
+  "device": "Galaxy A54",
+  "subject": "??",
+  "message": "App won't stay open on my Galaxy A54 since yesterday's update. Cleared cache, didn't help."
+ },
+ {
+  "id": 113,
+  "from": "Sam",
+  "device": "iPhone 13",
+  "subject": "Missing order",
+  "message": "Third time this week the app says ready and the order doesn't exist when I get there."
+ },
+ {
+  "id": 114,
+  "from": "Tess",
+  "device": "iPhone SE",
+  "subject": "Order problem",
+  "message": "Checkout page takes forever to load. Not failing, just slow, almost a minute."
+ },
+ {
+  "id": 115,
+  "from": "Diego",
+  "device": "iPhone 13",
+  "subject": "Locked out",
+  "message": "The two-step code never shows up in my texts, so I can't get past the sign in screen. I waited ten minutes."
+ },
+ {
+  "id": 116,
+  "from": "Hana",
+  "device": "OnePlus 12",
+  "subject": "Kudos",
+  "message": "The staff at The Grill on Main were so nice when I picked up today."
+ },
+ {
+  "id": 117,
+  "from": "Grace",
+  "device": "Pixel 7a",
+  "subject": "Feature request",
+  "message": "Let us split an order with a friend."
+ },
+ {
+  "id": 118,
+  "from": "Hana",
+  "device": "iPhone 15",
+  "subject": "Locked out",
+  "message": "The two-step code never shows up in my texts, so I can't get past the sign in screen. I waited ten minutes."
+ },
+ {
+  "id": 119,
+  "from": "Zoe",
+  "device": "OnePlus 12",
+  "subject": "Happy",
+  "message": "Honestly the best dining app I've used, no complaints."
+ },
+ {
+  "id": 120,
+  "from": "Lucia",
+  "device": "Pixel 8",
+  "subject": "Closed??",
+  "message": "Ridge Commons shows open on Sunday mornings in the app but the doors say closed until noon."
+ },
+ {
+  "id": 121,
+  "from": "Kofi",
+  "device": "OnePlus 12",
+  "subject": "Suggestion",
+  "message": "Could you add dark mode? The app is blinding at night."
+ },
+ {
+  "id": 122,
+  "from": "Andre",
+  "device": "Galaxy A54",
+  "subject": "So slow",
+  "message": "The menu for The Grill on Main takes like 30 seconds to load, by then the line is shorter than the app."
+ },
+ {
+  "id": 123,
+  "from": "Andre",
+  "device": "Pixel 8",
+  "subject": "Not working",
+  "message": "Login button does nothing. I tapped it like 20 times. Reinstalled, same thing."
+ },
+ {
+  "id": 124,
+  "from": "Andre",
+  "device": "Pixel 7a",
+  "subject": "Pickup",
+  "message": "My order number wasn't on the screen at The Grill on Main even though the app said it was ready 15 min ago."
+ },
+ {
+  "id": 125,
+  "from": "Jordan",
+  "device": "Pixel 7a",
+  "subject": "Missing order",
+  "message": "Third time this week the app says ready and the order doesn't exist when I get there."
+ },
+ {
+  "id": 126,
+  "from": "Mei",
+  "device": "iPhone 15",
+  "subject": "Hours wrong",
+  "message": "The app said Ridge Commons was open until 9 but it was dark at 7:30. Walked over for nothing."
+ },
+ {
+  "id": 127,
+  "from": "Andre",
+  "device": "OnePlus 12",
+  "subject": "So slow",
+  "message": "The menu for The Grill on Main takes like 30 seconds to load, by then the line is shorter than the app."
+ },
+ {
+  "id": 128,
+  "from": "Grace",
+  "device": "iPhone 13",
+  "subject": "Wishlist",
+  "message": "A widget that shows which hall has the shortest line would be amazing."
+ },
+ {
+  "id": 129,
+  "from": "Diego",
+  "device": "iPhone 13",
+  "subject": "Event",
+  "message": "Does the app list catering for club events?"
+ },
+ {
+  "id": 130,
+  "from": "Lucia",
+  "device": "iPhone 15",
+  "subject": "Idea",
+  "message": "It would be great to save a favorite order so I don't rebuild my pad see ew every time."
+ },
+ {
+  "id": 131,
+  "from": "Nina",
+  "device": "iPhone 15",
+  "subject": "Great app",
+  "message": "Ordering ahead at North Market saves me so much time between classes. Works great on my iPhone 15."
+ },
+ {
+  "id": 132,
+  "from": "Tess",
+  "device": "OnePlus 12",
+  "subject": "Order problem",
+  "message": "Got the 'ready for pickup' notification, went to The Grill on Main, staff said the order never printed in the kitchen."
+ },
+ {
+  "id": 133,
+  "from": "Hana",
+  "device": "iPhone SE",
+  "subject": "Happy",
+  "message": "Honestly the best dining app I've used, no complaints."
+ },
+ {
+  "id": 134,
+  "from": "Kofi",
+  "device": "Pixel 7a",
+  "subject": "Order problem",
+  "message": "Got the 'ready for pickup' notification, went to The Grill on Main, staff said the order never printed in the kitchen."
+ },
+ {
+  "id": 135,
+  "from": "Jordan",
+  "device": "iPhone SE",
+  "subject": "Sign-in loop",
+  "message": "I log in, it shows the home screen for a second, then kicks me back to the login page. On iPhone SE."
+ },
+ {
+  "id": 136,
+  "from": "Omar",
+  "device": "Pixel 8",
+  "subject": "Happy",
+  "message": "Honestly the best dining app I've used, no complaints."
+ },
+ {
+  "id": 137,
+  "from": "Hana",
+  "device": "Galaxy S23",
+  "subject": "Performance",
+  "message": "The app got really sluggish this month, every screen takes a few seconds."
+ },
+ {
+  "id": 138,
+  "from": "Lucia",
+  "device": "Pixel 8",
+  "subject": "Not received",
+  "message": "The app marked my a veggie burger complete, but it was never on the pickup shelf and nobody at Elm Hall had it."
+ },
+ {
+  "id": 139,
+  "from": "Ravi",
+  "device": "OnePlus 12",
+  "subject": "App closes",
+  "message": "Since the 4.2 update, the app closes as soon as I open the menu for Elm Hall. OnePlus 12."
+ },
+ {
+  "id": 140,
+  "from": "Zoe",
+  "device": "Galaxy S23",
+  "subject": "Not received",
+  "message": "The app marked my a veggie burger complete, but it was never on the pickup shelf and nobody at The Grill on Main had it."
+ },
+ {
+  "id": 141,
+  "from": "Diego",
+  "device": "Pixel 8",
+  "subject": "Nutrition",
+  "message": "Please show calories and allergens on each menu item."
+ },
+ {
+  "id": 142,
+  "from": "Lucia",
+  "device": "Pixel 8",
+  "subject": "Not received",
+  "message": "The app marked my a salad complete, but it was never on the pickup shelf and nobody at The Grill on Main had it."
+ },
+ {
+  "id": 143,
+  "from": "Jordan",
+  "device": "Pixel 7a",
+  "subject": "Pickup",
+  "message": "My order number wasn't on the screen at North Market even though the app said it was ready 15 min ago."
+ },
+ {
+  "id": 144,
+  "from": "Diego",
+  "device": "Galaxy A54",
+  "subject": "Card declined",
+  "message": "It says my card was declined but it works everywhere else, and the bank says no attempt reached them."
+ },
+ {
+  "id": 145,
+  "from": "Nina",
+  "device": "Galaxy S23",
+  "subject": "Where's my food",
+  "message": "App said my pad see ew was ready at The Grill on Main, but nobody could find it on the shelf."
+ },
+ {
+  "id": 146,
+  "from": "Priya",
+  "device": "Pixel 8",
+  "subject": "Order problem",
+  "message": "Checkout fails at the last step with 'payment could not be processed' every time I add a tip."
+ },
+ {
+  "id": 147,
+  "from": "Priya",
+  "device": "Pixel 8",
+  "subject": "Where's my food",
+  "message": "App said my a burrito bowl was ready at The Grill on Main, but nobody could find it on the shelf."
+ },
+ {
+  "id": 148,
+  "from": "Grace",
+  "device": "Pixel 7a",
+  "subject": "Account issue",
+  "message": "After I changed my password on the college portal, the app won't accept either the old or the new one."
+ },
+ {
+  "id": 149,
+  "from": "Mei",
+  "device": "Galaxy A54",
+  "subject": "Order problem",
+  "message": "Checkout fails at the last step with 'payment could not be processed' every time I add a tip."
+ },
+ {
+  "id": 150,
+  "from": "Nina",
+  "device": "iPhone 13",
+  "subject": "Order problem",
+  "message": "Placed a pickup order for Ridge Commons at 8pm because the app said open, the order just sat there. They close at 7 now."
+ },
+ {
+  "id": 151,
+  "from": "Omar",
+  "device": "Pixel 7a",
+  "subject": "Broken after update",
+  "message": "Updated this morning and now it shows the logo and then disappears. My roommate on iPhone is fine."
+ },
+ {
+  "id": 152,
+  "from": "Priya",
+  "device": "Pixel 8",
+  "subject": "Nice update",
+  "message": "The new pickup screen is really clear, thanks for that."
+ },
+ {
+  "id": 153,
+  "from": "Lucia",
+  "device": "Galaxy S23",
+  "subject": "App closes",
+  "message": "Since the 4.2 update, the app closes as soon as I open the menu for Elm Hall. Galaxy S23."
+ },
+ {
+  "id": 154,
+  "from": "Zoe",
+  "device": "Pixel 8",
+  "subject": "Kudos",
+  "message": "The staff at The Grill on Main were so nice when I picked up today."
+ },
+ {
+  "id": 155,
+  "from": "Eli",
+  "device": "iPhone 15",
+  "subject": "So slow",
+  "message": "The menu for North Market takes like 30 seconds to load, by then the line is shorter than the app."
+ },
+ {
+  "id": 156,
+  "from": "Ravi",
+  "device": "iPhone 15",
+  "subject": "Happy",
+  "message": "Honestly the best dining app I've used, no complaints."
+ },
+ {
+  "id": 157,
+  "from": "Mei",
+  "device": "OnePlus 12",
+  "subject": "Idea",
+  "message": "It would be great to save a favorite order so I don't rebuild my a burrito bowl every time."
+ },
+ {
+  "id": 158,
+  "from": "Jordan",
+  "device": "OnePlus 12",
+  "subject": "Kudos",
+  "message": "The staff at Elm Hall were so nice when I picked up today."
+ },
+ {
+  "id": 159,
+  "from": "Lucia",
+  "device": "iPhone 15",
+  "subject": "Can't log in",
+  "message": "I type my campus email and password and it just spins and then says 'something went wrong'. Tried three times this morning."
+ },
+ {
+  "id": 160,
+  "from": "Eli",
+  "device": "Pixel 7a",
+  "subject": "Idea",
+  "message": "It would be great to save a favorite order so I don't rebuild my a salad every time."
+ },
+ {
+  "id": 161,
+  "from": "Mei",
+  "device": "iPhone 13",
+  "subject": "So slow",
+  "message": "The menu for North Market takes like 30 seconds to load, by then the line is shorter than the app."
+ },
+ {
+  "id": 162,
+  "from": "Ravi",
+  "device": "Pixel 8",
+  "subject": "Where's my food",
+  "message": "App said my a salad was ready at The Grill on Main, but nobody could find it on the shelf."
+ },
+ {
+  "id": 163,
+  "from": "Andre",
+  "device": "Galaxy S23",
+  "subject": "Order problem",
+  "message": "Got the 'ready for pickup' notification, went to The Grill on Main, staff said the order never printed in the kitchen."
+ },
+ {
+  "id": 164,
+  "from": "Tess",
+  "device": "Galaxy S23",
+  "subject": "Crash",
+  "message": "Crashes on launch now. Was fine last week before the update. Galaxy S23, Android 14."
+ },
+ {
+  "id": 165,
+  "from": "Kofi",
+  "device": "Galaxy S23",
+  "subject": "Sign-in loop",
+  "message": "I log in, it shows the home screen for a second, then kicks me back to the login page. On Galaxy S23."
+ },
+ {
+  "id": 166,
+  "from": "Omar",
+  "device": "iPhone 15",
+  "subject": "Missing order",
+  "message": "Third time this week the app says ready and the order doesn't exist when I get there."
+ },
+ {
+  "id": 167,
+  "from": "Grace",
+  "device": "iPhone SE",
+  "subject": "Great app",
+  "message": "Ordering ahead at The Grill on Main saves me so much time between classes. Works great on my iPhone SE."
+ },
+ {
+  "id": 168,
+  "from": "Jordan",
+  "device": "Pixel 8",
+  "subject": "Refund?",
+  "message": "Cancelled my order before it was made and I still haven't gotten the $13.40 back, it's been a week."
+ },
+ {
+  "id": 169,
+  "from": "Diego",
+  "device": "Pixel 7a",
+  "subject": "Kudos",
+  "message": "The staff at Elm Hall were so nice when I picked up today."
+ },
+ {
+  "id": 170,
+  "from": "Eli",
+  "device": "Pixel 8",
+  "subject": "Wishlist",
+  "message": "A widget that shows which hall has the shortest line would be amazing."
+ },
+ {
+  "id": 171,
+  "from": "Lucia",
+  "device": "Pixel 8",
+  "subject": "Crash",
+  "message": "Crashes on launch now. Was fine last week before the update. Pixel 8, Android 14."
+ },
+ {
+  "id": 172,
+  "from": "Zoe",
+  "device": "OnePlus 12",
+  "subject": "App closes",
+  "message": "Since the 4.2 update, the app closes as soon as I open the menu for Elm Hall. OnePlus 12."
+ },
+ {
+  "id": 173,
+  "from": "Lucia",
+  "device": "iPhone SE",
+  "subject": "Pickup",
+  "message": "My order number wasn't on the screen at The Grill on Main even though the app said it was ready 15 min ago."
+ },
+ {
+  "id": 174,
+  "from": "Zoe",
+  "device": "iPhone 15",
+  "subject": "Nutrition",
+  "message": "Please show calories and allergens on each menu item."
+ },
+ {
+  "id": 175,
+  "from": "Priya",
+  "device": "Pixel 8",
+  "subject": "Request",
+  "message": "Can we schedule an order for later in the day?"
+ },
+ {
+  "id": 176,
+  "from": "Kofi",
+  "device": "Galaxy S23",
+  "subject": "Hours wrong",
+  "message": "The app said Ridge Commons was open until 9 but it was dark at 7:30. Walked over for nothing."
+ },
+ {
+  "id": 177,
+  "from": "Priya",
+  "device": "iPhone 13",
+  "subject": "Performance",
+  "message": "The app got really sluggish this month, every screen takes a few seconds."
+ },
+ {
+  "id": 178,
+  "from": "Ravi",
+  "device": "iPhone SE",
+  "subject": "Question",
+  "message": "Is Elm Hall hiring student workers this semester?"
+ },
+ {
+  "id": 179,
+  "from": "Zoe",
+  "device": "Galaxy S23",
+  "subject": "Suggestion",
+  "message": "Could you add dark mode? The app is blinding at night."
+ },
+ {
+  "id": 180,
+  "from": "Jordan",
+  "device": "Pixel 8",
+  "subject": "Broken after update",
+  "message": "Updated this morning and now it shows the logo and then disappears. My roommate on iPhone is fine."
+ },
+ {
+  "id": 181,
+  "from": "Grace",
+  "device": "Pixel 8",
+  "subject": "Schedule",
+  "message": "Ridge Commons weekend hours in the app don't match the sign on the door at all."
+ },
+ {
+  "id": 182,
+  "from": "Zoe",
+  "device": "iPhone 13",
+  "subject": "Feature request",
+  "message": "Let us split an order with a friend."
+ },
+ {
+  "id": 183,
+  "from": "Tess",
+  "device": "Pixel 7a",
+  "subject": "??",
+  "message": "App won't stay open on my Pixel 7a since yesterday's update. Cleared cache, didn't help."
+ },
+ {
+  "id": 184,
+  "from": "Andre",
+  "device": "Pixel 7a",
+  "subject": "Loading forever",
+  "message": "Spinning wheel every time I open the app between classes, campus wifi is fine for everything else."
+ },
+ {
+  "id": 185,
+  "from": "Grace",
+  "device": "Pixel 8",
+  "subject": "Closed??",
+  "message": "Ridge Commons shows open on Sunday mornings in the app but the doors say closed until noon."
+ },
+ {
+  "id": 186,
+  "from": "Priya",
+  "device": "Pixel 8",
+  "subject": "Question",
+  "message": "Is Elm Hall hiring student workers this semester?"
+ },
+ {
+  "id": 187,
+  "from": "Ravi",
+  "device": "iPhone 15",
+  "subject": "Card declined",
+  "message": "It says my card was declined but it works everywhere else, and the bank says no attempt reached them."
+ },
+ {
+  "id": 188,
+  "from": "Mei",
+  "device": "OnePlus 12",
+  "subject": "help!!",
+  "message": "verification code expired before it even arrived. now it says too many attempts. I just want lunch"
+ },
+ {
+  "id": 189,
+  "from": "Nina",
+  "device": "Pixel 8",
+  "subject": "Closed??",
+  "message": "Ridge Commons shows open on Sunday mornings in the app but the doors say closed until noon."
+ },
+ {
+  "id": 190,
+  "from": "Priya",
+  "device": "Galaxy S23",
+  "subject": "Request",
+  "message": "Can we schedule an order for later in the day?"
+ },
+ {
+  "id": 191,
+  "from": "Sam",
+  "device": "iPhone 15",
+  "subject": "Accessibility",
+  "message": "Bigger text option please, the menu font is tiny."
+ },
+ {
+  "id": 192,
+  "from": "Hana",
+  "device": "iPhone 15",
+  "subject": "Accessibility",
+  "message": "Bigger text option please, the menu font is tiny."
+ },
+ {
+  "id": 193,
+  "from": "Zoe",
+  "device": "Pixel 7a",
+  "subject": "Nutrition",
+  "message": "Please show calories and allergens on each menu item."
+ },
+ {
+  "id": 194,
+  "from": "Diego",
+  "device": "iPhone 13",
+  "subject": "Loading forever",
+  "message": "Spinning wheel every time I open the app between classes, campus wifi is fine for everything else."
+ },
+ {
+  "id": 195,
+  "from": "Eli",
+  "device": "Pixel 8",
+  "subject": "Menu",
+  "message": "Will the pho be back at Elm Hall? Haven't seen it in a while."
+ },
+ {
+  "id": 196,
+  "from": "Lucia",
+  "device": "iPhone SE",
+  "subject": "Request",
+  "message": "Can we schedule an order for later in the day?"
+ },
+ {
+  "id": 197,
+  "from": "Nina",
+  "device": "Galaxy S23",
+  "subject": "Account issue",
+  "message": "After I changed my password on the college portal, the app won't accept either the old or the new one."
+ },
+ {
+  "id": 198,
+  "from": "Tess",
+  "device": "Pixel 8",
+  "subject": "Feature request",
+  "message": "Let us split an order with a friend."
+ },
+ {
+  "id": 199,
+  "from": "Eli",
+  "device": "iPhone 15",
+  "subject": "Wasted trip",
+  "message": "App told me Ridge Commons serves breakfast till 11. They stopped at 10. Please fix the hours."
+ },
+ {
+  "id": 200,
+  "from": "Omar",
+  "device": "Pixel 7a",
+  "subject": "Thanks!",
+  "message": "Love the new menu photos, makes it easy to pick."
+ },
+ {
+  "id": 201,
+  "from": "Nina",
+  "device": "Galaxy A54",
+  "subject": "Nutrition",
+  "message": "Please show calories and allergens on each menu item."
+ },
+ {
+  "id": 202,
+  "from": "Ravi",
+  "device": "OnePlus 12",
+  "subject": "Happy",
+  "message": "Honestly the best dining app I've used, no complaints."
+ },
+ {
+  "id": 203,
+  "from": "Sam",
+  "device": "iPhone 13",
+  "subject": "Feature request",
+  "message": "Let us split an order with a friend."
+ },
+ {
+  "id": 204,
+  "from": "Mei",
+  "device": "Galaxy S23",
+  "subject": "Loading forever",
+  "message": "Spinning wheel every time I open the app between classes, campus wifi is fine for everything else."
+ },
+ {
+  "id": 205,
+  "from": "Omar",
+  "device": "Galaxy S23",
+  "subject": "Menu",
+  "message": "Will the pho be back at The Grill on Main? Haven't seen it in a while."
+ },
+ {
+  "id": 206,
+  "from": "Kofi",
+  "device": "iPhone 13",
+  "subject": "Wishlist",
+  "message": "A widget that shows which hall has the shortest line would be amazing."
+ },
+ {
+  "id": 207,
+  "from": "Tess",
+  "device": "iPhone 15",
+  "subject": "Request",
+  "message": "Can we schedule an order for later in the day?"
+ },
+ {
+  "id": 208,
+  "from": "Mei",
+  "device": "Galaxy A54",
+  "subject": "Lost item",
+  "message": "Left my water bottle at The Grill on Main, is there a lost and found?"
+ },
+ {
+  "id": 209,
+  "from": "Lucia",
+  "device": "iPhone 15",
+  "subject": "Can't log in",
+  "message": "I type my campus email and password and it just spins and then says 'something went wrong'. Tried three times this morning."
+ },
+ {
+  "id": 210,
+  "from": "Kofi",
+  "device": "Galaxy S23",
+  "subject": "Order problem",
+  "message": "Checkout page takes forever to load. Not failing, just slow, almost a minute."
+ },
+ {
+  "id": 211,
+  "from": "Nina",
+  "device": "iPhone 13",
+  "subject": "Where's my food",
+  "message": "App said my the pho was ready at The Grill on Main, but nobody could find it on the shelf."
+ },
+ {
+  "id": 212,
+  "from": "Priya",
+  "device": "Pixel 7a",
+  "subject": "Card declined",
+  "message": "It says my card was declined but it works everywhere else, and the bank says no attempt reached them."
+ },
+ {
+  "id": 213,
+  "from": "Sam",
+  "device": "OnePlus 12",
+  "subject": "Locked out",
+  "message": "The two-step code never shows up in my texts, so I can't get past the sign in screen. I waited ten minutes."
+ },
+ {
+  "id": 214,
+  "from": "Mei",
+  "device": "iPhone SE",
+  "subject": "Not received",
+  "message": "The app marked my a burrito bowl complete, but it was never on the pickup shelf and nobody at North Market had it."
+ },
+ {
+  "id": 215,
+  "from": "Omar",
+  "device": "iPhone 15",
+  "subject": "Question",
+  "message": "Is Elm Hall hiring student workers this semester?"
+ },
+ {
+  "id": 216,
+  "from": "Hana",
+  "device": "Pixel 8",
+  "subject": "Missing order",
+  "message": "Third time this week the app says ready and the order doesn't exist when I get there."
+ },
+ {
+  "id": 217,
+  "from": "Nina",
+  "device": "iPhone 15",
+  "subject": "Not working",
+  "message": "Login button does nothing. I tapped it like 20 times. Reinstalled, same thing."
+ },
+ {
+  "id": 218,
+  "from": "Diego",
+  "device": "Galaxy S23",
+  "subject": "So slow",
+  "message": "The menu for The Grill on Main takes like 30 seconds to load, by then the line is shorter than the app."
+ },
+ {
+  "id": 219,
+  "from": "Zoe",
+  "device": "Galaxy A54",
+  "subject": "Order problem",
+  "message": "Checkout page takes forever to load. Not failing, just slow, almost a minute."
+ },
+ {
+  "id": 220,
+  "from": "Nina",
+  "device": "Pixel 7a",
+  "subject": "Meal swipes",
+  "message": "Tried to pay with meal swipes and it took a swipe AND charged my card $11.25."
+ },
+ {
+  "id": 221,
+  "from": "Kofi",
+  "device": "iPhone 13",
+  "subject": "Quick question",
+  "message": "Why does Apple Pay just close the payment sheet without paying? I end up paying at the counter."
+ },
+ {
+  "id": 222,
+  "from": "Diego",
+  "device": "OnePlus 12",
+  "subject": "Meal swipes",
+  "message": "Tried to pay with meal swipes and it took a swipe AND charged my card $6.75."
+ },
+ {
+  "id": 223,
+  "from": "Eli",
+  "device": "iPhone SE",
+  "subject": "Not working",
+  "message": "Login button does nothing. I tapped it like 20 times. Reinstalled, same thing."
+ },
+ {
+  "id": 224,
+  "from": "Eli",
+  "device": "Galaxy A54",
+  "subject": "Accessibility",
+  "message": "Bigger text option please, the menu font is tiny."
+ },
+ {
+  "id": 225,
+  "from": "Nina",
+  "device": "OnePlus 12",
+  "subject": "Not working",
+  "message": "Login button does nothing. I tapped it like 20 times. Reinstalled, same thing."
+ },
+ {
+  "id": 226,
+  "from": "Omar",
+  "device": "iPhone 15",
+  "subject": "Can't log in",
+  "message": "I type my campus email and password and it just spins and then says 'something went wrong'. Tried three times this morning."
+ },
+ {
+  "id": 227,
+  "from": "Eli",
+  "device": "Pixel 7a",
+  "subject": "Thanks!",
+  "message": "Love the new menu photos, makes it easy to pick."
+ },
+ {
+  "id": 228,
+  "from": "Mei",
+  "device": "Pixel 8",
+  "subject": "Great app",
+  "message": "Ordering ahead at The Grill on Main saves me so much time between classes. Works great on my Pixel 8."
+ },
+ {
+  "id": 229,
+  "from": "Hana",
+  "device": "Galaxy A54",
+  "subject": "Account issue",
+  "message": "After I changed my password on the college portal, the app won't accept either the old or the new one."
+ },
+ {
+  "id": 230,
+  "from": "Eli",
+  "device": "iPhone SE",
+  "subject": "Pickup",
+  "message": "My order number wasn't on the screen at North Market even though the app said it was ready 15 min ago."
+ },
+ {
+  "id": 231,
+  "from": "Priya",
+  "device": "Galaxy S23",
+  "subject": "Performance",
+  "message": "The app got really sluggish this month, every screen takes a few seconds."
+ },
+ {
+  "id": 232,
+  "from": "Jordan",
+  "device": "Pixel 7a",
+  "subject": "Card declined",
+  "message": "It says my card was declined but it works everywhere else, and the bank says no attempt reached them."
+ },
+ {
+  "id": 233,
+  "from": "Omar",
+  "device": "iPhone SE",
+  "subject": "Card declined",
+  "message": "It says my card was declined but it works everywhere else, and the bank says no attempt reached them."
+ },
+ {
+  "id": 234,
+  "from": "Sam",
+  "device": "iPhone 13",
+  "subject": "Order problem",
+  "message": "Got the 'ready for pickup' notification, went to North Market, staff said the order never printed in the kitchen."
+ },
+ {
+  "id": 235,
+  "from": "Eli",
+  "device": "iPhone 15",
+  "subject": "Where's my food",
+  "message": "App said my the pho was ready at The Grill on Main, but nobody could find it on the shelf."
+ },
+ {
+  "id": 236,
+  "from": "Andre",
+  "device": "Pixel 7a",
+  "subject": "Broken after update",
+  "message": "Updated this morning and now it shows the logo and then disappears. My roommate on iPhone is fine."
+ },
+ {
+  "id": 237,
+  "from": "Zoe",
+  "device": "iPhone 15",
+  "subject": "Quick question",
+  "message": "Is there a reason the app keeps signing me out every time I close it? Then it won't let me back in without resetting my password."
+ },
+ {
+  "id": 238,
+  "from": "Omar",
+  "device": "Galaxy A54",
+  "subject": "Crash",
+  "message": "Crashes on launch now. Was fine last week before the update. Galaxy A54, Android 14."
+ },
+ {
+  "id": 239,
+  "from": "Sam",
+  "device": "Pixel 8",
+  "subject": "Idea",
+  "message": "It would be great to save a favorite order so I don't rebuild my two bagels every time."
+ },
+ {
+  "id": 240,
+  "from": "Tess",
+  "device": "OnePlus 12",
+  "subject": "Quick question",
+  "message": "Why does Apple Pay just close the payment sheet without paying? I end up paying at the counter."
+ },
+ {
+  "id": 241,
+  "from": "Nina",
+  "device": "Galaxy A54",
+  "subject": "Quick question",
+  "message": "Is there a reason the app keeps signing me out every time I close it? Then it won't let me back in without resetting my password."
+ },
+ {
+  "id": 242,
+  "from": "Diego",
+  "device": "iPhone 15",
+  "subject": "Hours wrong",
+  "message": "The app said Ridge Commons was open until 9 but it was dark at 7:30. Walked over for nothing."
+ },
+ {
+  "id": 243,
+  "from": "Jordan",
+  "device": "Galaxy S23",
+  "subject": "Order problem",
+  "message": "Checkout fails at the last step with 'payment could not be processed' every time I add a tip."
+ },
+ {
+  "id": 244,
+  "from": "Diego",
+  "device": "OnePlus 12",
+  "subject": "Request",
+  "message": "Can we schedule an order for later in the day?"
+ },
+ {
+  "id": 245,
+  "from": "Grace",
+  "device": "Pixel 7a",
+  "subject": "So slow",
+  "message": "The menu for North Market takes like 30 seconds to load, by then the line is shorter than the app."
+ },
+ {
+  "id": 246,
+  "from": "Kofi",
+  "device": "OnePlus 12",
+  "subject": "Feature request",
+  "message": "Let us split an order with a friend."
+ },
+ {
+  "id": 247,
+  "from": "Tess",
+  "device": "Galaxy S23",
+  "subject": "Order problem",
+  "message": "Checkout page takes forever to load. Not failing, just slow, almost a minute."
+ },
+ {
+  "id": 248,
+  "from": "Hana",
+  "device": "OnePlus 12",
+  "subject": "Laggy",
+  "message": "Scrolling the menu stutters and freezes for a few seconds. OnePlus 12."
+ },
+ {
+  "id": 249,
+  "from": "Grace",
+  "device": "iPhone 15",
+  "subject": "Suggestion",
+  "message": "Could you add dark mode? The app is blinding at night."
+ },
+ {
+  "id": 250,
+  "from": "Andre",
+  "device": "OnePlus 12",
+  "subject": "help!!",
+  "message": "verification code expired before it even arrived. now it says too many attempts. I just want lunch"
+ },
+ {
+  "id": 251,
+  "from": "Zoe",
+  "device": "Galaxy S23",
+  "subject": "Idea",
+  "message": "It would be great to save a favorite order so I don't rebuild my a chicken wrap every time."
+ },
+ {
+  "id": 252,
+  "from": "Eli",
+  "device": "iPhone 13",
+  "subject": "Can't log in",
+  "message": "I type my campus email and password and it just spins and then says 'something went wrong'. Tried three times this morning."
+ },
+ {
+  "id": 253,
+  "from": "Priya",
+  "device": "iPhone SE",
+  "subject": "Not received",
+  "message": "The app marked my a smoothie complete, but it was never on the pickup shelf and nobody at The Grill on Main had it."
+ },
+ {
+  "id": 254,
+  "from": "Andre",
+  "device": "iPhone SE",
+  "subject": "Kudos",
+  "message": "The staff at North Market were so nice when I picked up today."
+ },
+ {
+  "id": 255,
+  "from": "Diego",
+  "device": "Galaxy S23",
+  "subject": "Refund?",
+  "message": "Cancelled my order before it was made and I still haven't gotten the $13.40 back, it's been a week."
+ },
+ {
+  "id": 256,
+  "from": "Grace",
+  "device": "Pixel 8",
+  "subject": "Crash",
+  "message": "Crashes on launch now. Was fine last week before the update. Pixel 8, Android 14."
+ },
+ {
+  "id": 257,
+  "from": "Priya",
+  "device": "Pixel 7a",
+  "subject": "Kudos",
+  "message": "The staff at Elm Hall were so nice when I picked up today."
+ },
+ {
+  "id": 258,
+  "from": "Zoe",
+  "device": "iPhone SE",
+  "subject": "Locked out",
+  "message": "The two-step code never shows up in my texts, so I can't get past the sign in screen. I waited ten minutes."
+ },
+ {
+  "id": 259,
+  "from": "Andre",
+  "device": "iPhone 13",
+  "subject": "Laggy",
+  "message": "Scrolling the menu stutters and freezes for a few seconds. iPhone 13."
+ },
+ {
+  "id": 260,
+  "from": "Tess",
+  "device": "Pixel 8",
+  "subject": "Charged twice",
+  "message": "My two bagels order went through but my card shows two charges of $13.40. Please refund one."
+ },
+ {
+  "id": 261,
+  "from": "Grace",
+  "device": "Pixel 7a",
+  "subject": "Pickup",
+  "message": "My order number wasn't on the screen at North Market even though the app said it was ready 15 min ago."
+ },
+ {
+  "id": 262,
+  "from": "Hana",
+  "device": "Galaxy A54",
+  "subject": "Missing order",
+  "message": "Third time this week the app says ready and the order doesn't exist when I get there."
+ },
+ {
+  "id": 263,
+  "from": "Ravi",
+  "device": "OnePlus 12",
+  "subject": "help!!",
+  "message": "verification code expired before it even arrived. now it says too many attempts. I just want lunch"
+ },
+ {
+  "id": 264,
+  "from": "Zoe",
+  "device": "Pixel 8",
+  "subject": "Nice update",
+  "message": "The new pickup screen is really clear, thanks for that."
+ },
+ {
+  "id": 265,
+  "from": "Omar",
+  "device": "iPhone 15",
+  "subject": "Order problem",
+  "message": "Got the 'ready for pickup' notification, went to Elm Hall, staff said the order never printed in the kitchen."
+ },
+ {
+  "id": 266,
+  "from": "Lucia",
+  "device": "iPhone 15",
+  "subject": "Where's my food",
+  "message": "App said my a chicken wrap was ready at The Grill on Main, but nobody could find it on the shelf."
+ },
+ {
+  "id": 267,
+  "from": "Zoe",
+  "device": "iPhone SE",
+  "subject": "Meal swipes",
+  "message": "Tried to pay with meal swipes and it took a swipe AND charged my card $11.25."
+ },
+ {
+  "id": 268,
+  "from": "Lucia",
+  "device": "Galaxy S23",
+  "subject": "Pickup",
+  "message": "My order number wasn't on the screen at Elm Hall even though the app said it was ready 15 min ago."
+ },
+ {
+  "id": 269,
+  "from": "Lucia",
+  "device": "Pixel 7a",
+  "subject": "Wasted trip",
+  "message": "App told me Ridge Commons serves breakfast till 11. They stopped at 10. Please fix the hours."
+ },
+ {
+  "id": 270,
+  "from": "Ravi",
+  "device": "iPhone 13",
+  "subject": "Event",
+  "message": "Does the app list catering for club events?"
+ },
+ {
+  "id": 271,
+  "from": "Eli",
+  "device": "Pixel 8",
+  "subject": "Crash",
+  "message": "Crashes on launch now. Was fine last week before the update. Pixel 8, Android 14."
+ },
+ {
+  "id": 272,
+  "from": "Ravi",
+  "device": "iPhone SE",
+  "subject": "Order problem",
+  "message": "Checkout page takes forever to load. Not failing, just slow, almost a minute."
+ },
+ {
+  "id": 273,
+  "from": "Tess",
+  "device": "OnePlus 12",
+  "subject": "Closed??",
+  "message": "Ridge Commons shows open on Sunday mornings in the app but the doors say closed until noon."
+ },
+ {
+  "id": 274,
+  "from": "Priya",
+  "device": "Pixel 7a",
+  "subject": "Schedule",
+  "message": "Ridge Commons weekend hours in the app don't match the sign on the door at all."
+ },
+ {
+  "id": 275,
+  "from": "Diego",
+  "device": "iPhone 15",
+  "subject": "Sign-in loop",
+  "message": "I log in, it shows the home screen for a second, then kicks me back to the login page. On iPhone 15."
+ },
+ {
+  "id": 276,
+  "from": "Priya",
+  "device": "Galaxy S23",
+  "subject": "Order problem",
+  "message": "Got the 'ready for pickup' notification, went to Elm Hall, staff said the order never printed in the kitchen."
+ },
+ {
+  "id": 277,
+  "from": "Eli",
+  "device": "Galaxy S23",
+  "subject": "Feature request",
+  "message": "Let us split an order with a friend."
+ },
+ {
+  "id": 278,
+  "from": "Eli",
+  "device": "Pixel 7a",
+  "subject": "Quick question",
+  "message": "Is there a reason the app keeps signing me out every time I close it? Then it won't let me back in without resetting my password."
+ },
+ {
+  "id": 279,
+  "from": "Mei",
+  "device": "iPhone 13",
+  "subject": "Order problem",
+  "message": "Got the 'ready for pickup' notification, went to North Market, staff said the order never printed in the kitchen."
+ },
+ {
+  "id": 280,
+  "from": "Nina",
+  "device": "iPhone 13",
+  "subject": "Thanks!",
+  "message": "Love the new menu photos, makes it easy to pick."
+ },
+ {
+  "id": 281,
+  "from": "Andre",
+  "device": "Pixel 8",
+  "subject": "Quick question",
+  "message": "Why does Apple Pay just close the payment sheet without paying? I end up paying at the counter."
+ },
+ {
+  "id": 282,
+  "from": "Sam",
+  "device": "iPhone SE",
+  "subject": "Accessibility",
+  "message": "Bigger text option please, the menu font is tiny."
+ },
+ {
+  "id": 283,
+  "from": "Nina",
+  "device": "iPhone 15",
+  "subject": "Order problem",
+  "message": "Checkout fails at the last step with 'payment could not be processed' every time I add a tip."
+ },
+ {
+  "id": 284,
+  "from": "Ravi",
+  "device": "iPhone 13",
+  "subject": "Lost item",
+  "message": "Left my water bottle at The Grill on Main, is there a lost and found?"
+ },
+ {
+  "id": 285,
+  "from": "Grace",
+  "device": "Pixel 7a",
+  "subject": "Great app",
+  "message": "Ordering ahead at North Market saves me so much time between classes. Works great on my Pixel 7a."
+ },
+ {
+  "id": 286,
+  "from": "Jordan",
+  "device": "iPhone 13",
+  "subject": "Nice update",
+  "message": "The new pickup screen is really clear, thanks for that."
+ },
+ {
+  "id": 287,
+  "from": "Priya",
+  "device": "iPhone SE",
+  "subject": "Not received",
+  "message": "The app marked my a smoothie complete, but it was never on the pickup shelf and nobody at North Market had it."
+ },
+ {
+  "id": 288,
+  "from": "Andre",
+  "device": "Pixel 7a",
+  "subject": "Refund?",
+  "message": "Cancelled my order before it was made and I still haven't gotten the $6.75 back, it's been a week."
+ },
+ {
+  "id": 289,
+  "from": "Zoe",
+  "device": "iPhone SE",
+  "subject": "Thanks!",
+  "message": "Love the new menu photos, makes it easy to pick."
+ },
+ {
+  "id": 290,
+  "from": "Sam",
+  "device": "Pixel 7a",
+  "subject": "Nutrition",
+  "message": "Please show calories and allergens on each menu item."
+ },
+ {
+  "id": 291,
+  "from": "Lucia",
+  "device": "Pixel 7a",
+  "subject": "App closes",
+  "message": "Since the 4.2 update, the app closes as soon as I open the menu for The Grill on Main. Pixel 7a."
+ },
+ {
+  "id": 292,
+  "from": "Mei",
+  "device": "Pixel 7a",
+  "subject": "Idea",
+  "message": "It would be great to save a favorite order so I don't rebuild my two bagels every time."
+ },
+ {
+  "id": 293,
+  "from": "Andre",
+  "device": "iPhone SE",
+  "subject": "Kudos",
+  "message": "The staff at Elm Hall were so nice when I picked up today."
+ },
+ {
+  "id": 294,
+  "from": "Grace",
+  "device": "Galaxy A54",
+  "subject": "Question",
+  "message": "Is Elm Hall hiring student workers this semester?"
+ },
+ {
+  "id": 295,
+  "from": "Diego",
+  "device": "OnePlus 12",
+  "subject": "Where's my food",
+  "message": "App said my a burrito bowl was ready at Elm Hall, but nobody could find it on the shelf."
+ },
+ {
+  "id": 296,
+  "from": "Eli",
+  "device": "Galaxy A54",
+  "subject": "Event",
+  "message": "Does the app list catering for club events?"
+ },
+ {
+  "id": 297,
+  "from": "Zoe",
+  "device": "Pixel 8",
+  "subject": "Charged twice",
+  "message": "My a smoothie order went through but my card shows two charges of $8.50. Please refund one."
+ },
+ {
+  "id": 298,
+  "from": "Ravi",
+  "device": "Pixel 7a",
+  "subject": "??",
+  "message": "App won't stay open on my Pixel 7a since yesterday's update. Cleared cache, didn't help."
+ },
+ {
+  "id": 299,
+  "from": "Priya",
+  "device": "OnePlus 12",
+  "subject": "Schedule",
+  "message": "Ridge Commons weekend hours in the app don't match the sign on the door at all."
+ },
+ {
+  "id": 300,
+  "from": "Jordan",
+  "device": "OnePlus 12",
+  "subject": "Quick question",
+  "message": "Is there a reason the app keeps signing me out every time I close it? Then it won't let me back in without resetting my password."
+ }
+]

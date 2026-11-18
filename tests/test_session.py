@@ -50,10 +50,11 @@ def complete_models() -> list[str]:
     return complete
 
 
-def test_each_task_ran_twice_each_way_on_three_models() -> None:
-    """On three models, two team runs and two single runs of each task."""
+def test_each_task_ran_twice_each_way_on_two_models() -> None:
+    """On glm-5.3-flash and one more model, each task ran twice each way."""
     assert tasks(), "docs/tasks.txt lists no tasks"
-    assert len(complete_models()) >= 3, complete_models()
+    assert "glm-5.3-flash" in complete_models(), complete_models()
+    assert len(complete_models()) >= 2, complete_models()
 
 
 def test_a_team_run_used_more_than_one_agent() -> None:

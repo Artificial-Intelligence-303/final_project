@@ -40,10 +40,10 @@ person first), and the check that rejects a bad call.
 
 TODO
 
-## Your three models
+## Your second model
 
-Which three of the five models you will compare, and what you expect each
-to do with your team and with one agent.
+Which model you will compare with glm-5.3-flash, which agents on your team
+run on which model, and what you expect each design to do on each model.
 
 TODO
 

@@ -29,18 +29,19 @@ uses:
   ```python
   from agents import Agent
 
-  finder = Agent(
-      name="Finder",
-      instructions="You find free study rooms. ...",
-      tools=[free_rooms],
-      model=model(),
+  reader = Agent(
+      name="Reader",
+      instructions="You read one batch of support messages ...",
+      tools=[read_tickets],
+      model=model("glm-5.3-flash"),
   )
   ```
 
   `name` is how the log and the other agents refer to it. `instructions`
   is its role, which the model reads at the start of each turn. `tools`
   lists the functions it may call. `handoffs` lists the agents it may pass
-  the conversation to. `model` is the model it runs on.
+  the conversation to. `model` is the model it runs on: `model()` for the
+  default, or `model("glm-5.3-flash")` to fix this agent to one model.
 - `agent.as_tool(name, description)`, which turns an agent into a tool
   that another agent can call. The calling agent sends it a request, the
   agent works on it with its own tools, and its final answer comes back as
@@ -64,8 +65,8 @@ which is how it runs here on OpenCode Zen.
 | `src/team.py` | yours | your tools, your agents, `build_team()` and `build_single()` |
 | `tests/test_*.py` of your own | yours | tests of your tools that call them directly, with no model calls |
 | `docs/plan.md`, `docs/tasks.txt`, `docs/evaluation.md`, `docs/reflection.md` | yours | the plan, the six tasks, the comparison, the reflection |
-| `src/example_rooms.py` | provided, to read | a finished team that books study rooms, in the shape your `team.py` takes |
-| `src/model.py` | provided | `model()`, which returns the model to give each agent, using your key in `.env` |
+| `src/example_inbox.py`, `example_data/` | provided, to read | a finished team that sorts a support inbox, in the shape your `team.py` takes |
+| `src/model.py` | provided | `model()`, which returns the model to give each agent, using your key in `.env`, and counts each model's tokens |
 | `src/run.py` | provided | `tool`, `ask_person` and `run`, described below |
 | `src/main.py` | provided | the commands that run one task, run the evaluation, and summarize the log |
 | `tests/test_team.py`, `tests/test_session.py` | provided, do not edit | checks on how your team is built and on your evaluation log |
@@ -77,13 +78,14 @@ which is how it runs here on OpenCode Zen.
   with what. If the function raises `ValueError`, the message goes back to
   the model as the result, starting `error:`, so the model can try again.
   The plain function stays reachable as `.function`, which is how your
-  tests call it: `free_rooms.function("Wednesday")`.
+  tests call it: `read_tickets.function(1, 3)`.
 - `ask_person(question)` asks the person at the keyboard to approve a
   change and returns `True` or `False`. Call it inside any tool that
   changes something, before it acts.
 - `run(lead, task, design)` gives a task to the lead agent, stops it
-  after 15 steps, writes one line to `logs/runs.jsonl`, and returns the
-  final answer. `main.py` calls it for you.
+  after 15 steps, writes one line to `logs/runs.jsonl` with the tokens and
+  the cost of each model, and returns the final answer. `main.py` calls it
+  for you.
 
 ### What happens on a run
 
@@ -100,25 +102,30 @@ which is how it runs here on OpenCode Zen.
 5. When the model answers in plain text, the loop ends, and `run` writes
    the log line and returns the answer.
 
-This is a real run of the example team, started with `uv run python
-src/example_rooms.py team "Book me a room Wednesday afternoon, after 2:30"`,
-shortened from its log line:
+The example team has three agents. The lead splits the inbox into six
+batches of 50 messages and calls the reader once for each batch. The
+reader, fixed to `glm-5.3-flash`, sorts its batch and returns counts, and
+the lead adds them up. A checker confirms a bug before the lead files it.
+This is a real run, with the lead on `qwen3.8-max`, shortened from its log
+line:
 
 ```text
-Desk     agent call  find_rooms     "Find free study room slots on Wednesday afternoon, after 2:30"
-Desk     result                     "... free study room slots on Wednesday after 2:30 PM: Room C at 3pm"
-Desk     agent call  check_booking  "Check proposed booking: Room C on Wednesday at 3:00 PM ..."
-Desk     result                     "... Room C is listed as free on Wednesday at 3:00 PM ... The booking can proceed."
-Desk     handoff     Booker
-Booker   tool call   book           {"day": "Wednesday", "slot": "Room C at 3pm"}
-                                    Book Room C at 3pm on Wednesday? Approve? [y/n] y
-Booker   result                     "booked Room C at 3pm on Wednesday"
-Booker   message                    "Your booking is confirmed: Room C, Wednesday at 3:00 PM. ..."
+Lead   tool call   count_tickets  {}
+Lead   result                     "300 messages, numbered 1 to 300"
+Lead   agent call  read_batch     "Read messages 1 to 50. Count how many fall into each category ..."
+Lead   agent call  read_batch     "Read messages 51 to 100. ..."
+   ... four more read_batch calls, in the same turn ...
+Lead   result                     "login: 7 (#4, #10, #11, ...) android crash: 8 (#3, #23, ...) ..."
+   ... five more results, one per batch ...
+Lead   message                    "Top three problems: login 41, missing order 37, payment 34 ..."
 ```
 
-The finder and the checker each ran their own loop inside a call from the
-desk. The booker took over after the handoff and gave the final answer.
-The run used about 3,500 tokens and took 12 seconds.
+The six reader calls came in one turn, so the SDK ran them at the same
+time, each in its own fresh conversation. The lead did not read any message itself.
+The run took 36 seconds and cost 3.2 cents: `qwen3.8-max` used about 7,300
+tokens and `glm-5.3-flash` about 27,000. One `qwen3.8-max` agent doing the
+same task alone read each message itself, took over three minutes, and
+cost about 20 cents.
 
 `single` does the same with `build_single()`: one agent, the same tools, no
 agent tools and no handoffs.
@@ -126,7 +133,8 @@ agent tools and no handoffs.
 ## What you build
 
 A team for a real task, one a person actually does. You may build on your
-Project 2 task, data and tool code. All of it goes in `src/team.py`:
+Project 2 task, data and tool code. Your task cannot be the example's, a
+support or feedback inbox. All of it goes in `src/team.py`:
 
 1. Two or more tools of your own, each a function with `@tool`, type
    hints, and a docstring the model can act on.
@@ -146,7 +154,7 @@ Project 2 task, data and tool code. All of it goes in `src/team.py`:
    team and no other agents, for the comparison.
 6. Tests of your own, in at least one file in `tests/`, covering each
    tool and at least one guardrail. Your tests call each tool's plain
-   function, such as `free_rooms.function("Wednesday")`, so they make no
+   function, such as `read_tickets.function(1, 3)`, so they make no
    model calls.
 
 If you work as a team of two, your team has four or more agents and your
@@ -186,8 +194,6 @@ work with, such as a semester of records instead of a week.
 
 Tasks that fit:
 
-- A feedback inbox of several hundred messages: count the problems and
-  file reports for the real ones.
 - Reviews of several products or places: compare them one by one, then
   recommend.
 - Forty paper abstracts: sort them by topic and choose what to read first.
@@ -201,16 +207,16 @@ Tasks that fit:
 2. Copy `.env` from your Challenge 8 folder to the top of this repository.
    It holds one line, `ZEN_API_KEY=` followed by your key, and git leaves
    it out of your commits.
-3. Run the example as a team and as a single agent, and approve or decline
-   when it asks:
+3. Run the example as a team and as a single agent:
 
    ```bash
-   uv run python src/example_rooms.py team "Book me a room Wednesday"
-   uv run python src/example_rooms.py single "Book me a room Wednesday"
+   uv run python src/example_inbox.py team "How many messages report a crash?"
+   uv run python src/example_inbox.py single "How many messages report a crash?"
    ```
 
-   Open `logs/example-runs.jsonl` and find each step of the two runs.
-4. Read `src/example_rooms.py` from top to bottom. Your `team.py` follows
+   Open `logs/example-runs.jsonl` and find each step of the two runs, and
+   the tokens each model used.
+4. Read `src/example_inbox.py` from top to bottom. Your `team.py` follows
    its shape.
 5. Write `docs/plan.md`, due Tuesday 24 November.
 
@@ -226,7 +232,7 @@ you go:
    and try each with `uv run python src/main.py team "..."`. Read the log
    line to see which agents acted.
 4. Write your six tasks in `docs/tasks.txt`, then run the evaluation on
-   your three models.
+   your two models.
 5. Write `docs/evaluation.md`, then `docs/reflection.md`.
 
 ## Running your team
@@ -239,15 +245,17 @@ uv run python src/main.py log                  # runs, tokens, cents and seconds
 ```
 
 `team` and `single` run on `glm-5.3-flash` unless `.env` names another
-model with a line such as `MODEL=kimi-k2.6`. Each line of `logs/runs.jsonl`
+model with a line such as `MODEL=minimax-m3`. An agent fixed to a model
+with `model("...")` stays on it. Each line of `logs/runs.jsonl`
 records one run: the model, which agents acted, each tool call and its
 result, each handoff, each approval, the tokens each model used, the cost
 in dollars, and the time taken.
 
-## Choosing three models
+## Choosing your second model
 
-Your key reaches five models on OpenCode Zen. Choose three of them for
-your evaluation, and say why in your plan.
+Your evaluation runs on two models: `glm-5.3-flash`, the cheapest, and one
+more of your choice. Say which in your plan, and which agents on your team
+run on which model.
 
 | Model | Input, per million tokens | Output, per million tokens |
 | :---- | ----: | ----: |
@@ -257,8 +265,8 @@ your evaluation, and say why in your plan.
 | `kimi-k2.6` | $0.95 | $4.00 |
 | `qwen3.8-max` | $2.00 | $6.00 |
 
-Your key has a monthly budget, so build and test on `glm-5.3-flash`, the
-cheapest, and use the others for the evaluation.
+If a model answers with an error such as 410, it is unavailable for now,
+so choose another. Build and test on `glm-5.3-flash`.
 
 ## Evaluation
 
@@ -270,31 +278,54 @@ gives that answer when the team asks. A line without one declines any
 change, so you do not answer approvals by hand during the evaluation:
 
 ```text
-Book me the 3pm room on Wednesday. | approve
-Book me a room on Wednesday afternoon. | decline
+How many messages report the app crashing on Android?
+File a bug for each problem that at least 25 messages report. | approve
+File a bug for the wrong dining hall hours. | decline
 ```
 
-Then run the evaluation on each of your three models, one at a time or
-together:
+Then run the evaluation on your two models, one at a time or together:
 
 ```bash
-uv run python src/main.py eval glm-5.3-flash kimi-k2.6 deepseek-v4.1-flash
+uv run python src/main.py eval glm-5.3-flash minimax-m3
 ```
 
 On each model, it runs each task twice with your team and twice with
-your single agent. A call rejected inside an agent tool shows up
-in that agent's answer rather than as a result in the log, so your single
-agent's runs are where the checks find it. Judge each run in
-`docs/evaluation.md` by the test you set in your plan, and commit
+your single agent, so 24 runs a model. A call rejected inside an agent
+tool shows up in that agent's answer rather than as a result in the log,
+so your single agent's runs are where the checks find it. Judge each run
+in `docs/evaluation.md` by the test you set in your plan, and commit
 `logs/runs.jsonl`. To start a fresh log for a clean run, delete the file
 before you begin.
+
+### Planning your time and budget
+
+The runs take real time, and your key has a monthly budget, so start the
+evaluation early enough to run it twice.
+
+- Time: on the example's tasks, a run took about 25 to 70 seconds on
+  `glm-5.3-flash`. On `qwen3.8-max`, a team run took about 45 seconds and
+  a single-agent run up to three and a half minutes. Time two of your own
+  runs with `main.py team` and `main.py single`, then multiply by 24 for
+  each model. Plan for a second evaluation after you fix something, and
+  finish your evaluation by Saturday 5 December, so you have time to write
+  about it.
+- Budget: your key can spend $5 a month, and the December budget starts
+  on 1 December. On the example's tasks, a run cost about 1 cent on
+  `glm-5.3-flash`. On `qwen3.8-max`, a team run with its readers on
+  `glm-5.3-flash` cost about 4 cents and a single-agent run about 20 cents.
+  `uv run python src/main.py log` shows the cents per run, so after a few
+  runs you can estimate the rest. If your key reaches its budget, the
+  evaluation stops and says so.
+- Keep your computer awake, since a laptop that sleeps pauses the runs. On a
+  Mac, start the evaluation with `caffeinate -i` in front of it, as in
+  `caffeinate -i uv run python src/main.py eval glm-5.3-flash minimax-m3`.
 
 ## The automated checks
 
 Run the checks yourself with `uv run gatorgrade --config gatorgrade.yml`.
 They also run on GitHub when you push, and they confirm that your team and
 single agent are built as required, that your tests pass, that the log
-holds your evaluation on three models with a declined change and a
+holds your evaluation on two models with a declined change and a
 rejected call, that the
 style follows the Google Python style guide (`uv run ruff check src
 tests`), and that the documents are complete. The repository needs at least
