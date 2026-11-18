@@ -12,7 +12,9 @@ import time
 from pathlib import Path
 
 from agents import Agent, MaxTurnsExceeded, Runner, function_tool
+from openai import APIStatusError
 
+import model as models
 from model import model_name
 
 LOG = Path(__file__).parent.parent / "logs" / "runs.jsonl"
@@ -161,6 +163,7 @@ def run(lead: Agent, task: str, design: str) -> str:
         design: "team" or "single", recorded in the log.
     """
     _approvals.clear()
+    models.usage_by_model.clear()
     agent_tools = {
         offered.name: offered._agent_instance.name
         for agent in agents_in(lead)
@@ -177,8 +180,14 @@ def run(lead: Agent, task: str, design: str) -> str:
     start = time.monotonic()
     try:
         result = Runner.run_sync(lead, task, max_turns=MAX_TURNS)
-    except MaxTurnsExceeded:
-        answer = f"stopped: the step limit of {MAX_TURNS} was reached"
+    except (MaxTurnsExceeded, APIStatusError) as problem:
+        if isinstance(problem, MaxTurnsExceeded):
+            answer = f"stopped: the step limit of {MAX_TURNS} was reached"
+        else:
+            answer = (
+                f"stopped: the model service answered {problem.status_code}: "
+                f"{problem.message}"
+            )
         record.update(
             error=answer,
             steps=[],
@@ -204,6 +213,15 @@ def run(lead: Agent, task: str, design: str) -> str:
             input_tokens=usage.input_tokens,
             output_tokens=usage.output_tokens,
         )
+    record["tokens_by_model"] = {
+        name: {"input": counts[0], "output": counts[1]}
+        for name, counts in models.usage_by_model.items()
+    }
+    # Count from each model, so a run stopped by the step limit counts too.
+    record["input_tokens"] = sum(c[0] for c in models.usage_by_model.values())
+    record["output_tokens"] = sum(c[1] for c in models.usage_by_model.values())
+    spent = models.cost(models.usage_by_model)
+    record["cost"] = round(spent, 6) if spent is not None else None
     record["approvals"] = list(_approvals)
     record["seconds"] = round(time.monotonic() - start, 1)
     record["answer"] = answer[:1000]

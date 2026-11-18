@@ -1,8 +1,14 @@
-"""The model the agents on your team use. Provided; do not edit.
+"""The models the agents on your team use. Provided; do not edit.
 
-The model is glm-5.3-flash on OpenCode Zen, reached with the key in `.env`.
-`.env` may also set API_URL and MODEL to use another endpoint that speaks
-OpenAI chat completions, such as a local Ollama server.
+The default model is glm-5.3-flash on OpenCode Zen, reached with the key in
+`.env`. MODEL in `.env`, or the evaluation, changes the default. An agent
+can also be fixed to one model, as `model=model("qwen3.8-max")`, so a team
+can mix a cheap model for some agents with a stronger one for others.
+`.env` may also set API_URL to use another endpoint that speaks OpenAI chat
+completions, such as a local Ollama server.
+
+Each model counts the tokens it uses, so `run` can log the tokens and the
+cost of a run for each model.
 """
 
 import os
@@ -13,6 +19,18 @@ from openai import AsyncOpenAI
 
 URL = "https://opencode.ai/inference/openai/v1"
 NAME = "glm-5.3-flash"
+
+# Dollars per million tokens, input then output, on OpenCode Zen.
+PRICES = {
+    "glm-5.3-flash": (0.15, 0.50),
+    "deepseek-v4.1-flash": (0.30, 1.20),
+    "minimax-m3": (0.30, 1.20),
+    "kimi-k2.6": (0.95, 4.00),
+    "qwen3.8-max": (2.00, 6.00),
+}
+
+# Input and output tokens used by each model since the last reset.
+usage_by_model: dict[str, list[int]] = {}
 ENV_FILE = Path(__file__).parent.parent / ".env"
 
 # The SDK sends a trace of each run to OpenAI unless this is turned off.
@@ -34,14 +52,43 @@ def model_name() -> str:
     return setting("MODEL") or NAME
 
 
-def model() -> OpenAIChatCompletionsModel:
-    """Return the model to give each Agent you create, as `model=model()`."""
+class CountedModel(OpenAIChatCompletionsModel):
+    """The SDK's chat completions model, counting the tokens it uses."""
+
+    async def get_response(self, *args, **kwargs):
+        """Get the model's reply and add its tokens to usage_by_model."""
+        response = await super().get_response(*args, **kwargs)
+        counts = usage_by_model.setdefault(str(self.model), [0, 0])
+        counts[0] += response.usage.input_tokens
+        counts[1] += response.usage.output_tokens
+        return response
+
+
+def cost(counts: dict[str, list[int]]) -> float | None:
+    """Dollars for the tokens in `counts`, or None for a model not priced."""
+    total = 0.0
+    for name, (tokens_in, tokens_out) in counts.items():
+        if name not in PRICES:
+            return None
+        price_in, price_out = PRICES[name]
+        total += (tokens_in * price_in + tokens_out * price_out) / 1_000_000
+    return total
+
+
+def model(name: str = "") -> OpenAIChatCompletionsModel:
+    """Return the model to give an Agent, as `model=model()`.
+
+    Args:
+        name: a model to fix this agent to, such as "glm-5.3-flash". Leave
+            it out to use the default: MODEL in `.env`, or the model the
+            evaluation is running.
+    """
     key = setting("API_KEY") or setting("ZEN_API_KEY") or "no-key-set"
-    # A request that gets no answer in 60 seconds is tried again, twice.
+    # A request that gets no answer in 120 seconds is tried again, twice.
     client = AsyncOpenAI(
         base_url=setting("API_URL") or URL,
         api_key=key,
-        timeout=60,
+        timeout=120,
         max_retries=2,
     )
-    return OpenAIChatCompletionsModel(model=model_name(), openai_client=client)
+    return CountedModel(model=name or model_name(), openai_client=client)

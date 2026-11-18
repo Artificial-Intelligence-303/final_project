@@ -27,8 +27,9 @@ TODO
 
 ## Why one agent is not enough
 
-What you expect the team to do better than one agent with the same tools,
-and what you expect it to cost. Your evaluation tests this.
+Which reason from "Choosing a task a team is good at" in the README fits
+your task, what you expect the team to do better than one agent with the
+same tools, and what you expect it to cost. Your evaluation tests this.
 
 TODO
 

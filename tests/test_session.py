@@ -36,13 +36,13 @@ def test_six_tasks_are_listed() -> None:
 
 
 def complete_models() -> list[str]:
-    """Models on which each task ran three times with the team and alone."""
+    """Models on which each task ran twice with the team and twice alone."""
     complete = []
     for model in dict.fromkeys(r["model"] for r in runs()):
         mine = [r for r in runs() if r["model"] == model]
         if all(
             len([r for r in mine if r["task"] == task and r["design"] == d])
-            >= 3
+            >= 2
             for task in tasks()
             for d in ("team", "single")
         ):
@@ -50,8 +50,8 @@ def complete_models() -> list[str]:
     return complete
 
 
-def test_each_task_ran_three_times_each_way_on_three_models() -> None:
-    """On three models, three team runs and three single runs of each task."""
+def test_each_task_ran_twice_each_way_on_three_models() -> None:
+    """On three models, two team runs and two single runs of each task."""
     assert tasks(), "docs/tasks.txt lists no tasks"
     assert len(complete_models()) >= 3, complete_models()
 

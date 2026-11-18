@@ -11,7 +11,7 @@ a line from `logs/runs.jsonl`.
 
 ### Model 1: TODO
 
-| Task | Team: succeeded, of 3 | Single: succeeded, of 3 | Team tokens | Single tokens | Team seconds | Single seconds |
+| Task | Team: succeeded, of 2 | Single: succeeded, of 2 | Team cents | Single cents | Team seconds | Single seconds |
 | --- | --- | --- | --- | --- | --- | --- |
 | 1. TODO | | | | | | |
 | 2. TODO | | | | | | |
@@ -22,7 +22,7 @@ a line from `logs/runs.jsonl`.
 
 ### Model 2: TODO
 
-| Task | Team: succeeded, of 3 | Single: succeeded, of 3 | Team tokens | Single tokens | Team seconds | Single seconds |
+| Task | Team: succeeded, of 2 | Single: succeeded, of 2 | Team cents | Single cents | Team seconds | Single seconds |
 | --- | --- | --- | --- | --- | --- | --- |
 | 1. TODO | | | | | | |
 | 2. TODO | | | | | | |
@@ -33,7 +33,7 @@ a line from `logs/runs.jsonl`.
 
 ### Model 3: TODO
 
-| Task | Team: succeeded, of 3 | Single: succeeded, of 3 | Team tokens | Single tokens | Team seconds | Single seconds |
+| Task | Team: succeeded, of 2 | Single: succeeded, of 2 | Team cents | Single cents | Team seconds | Single seconds |
 | --- | --- | --- | --- | --- | --- | --- |
 | 1. TODO | | | | | | |
 | 2. TODO | | | | | | |
@@ -44,9 +44,9 @@ a line from `logs/runs.jsonl`.
 
 ## Across the three models
 
-Each design ran each of six tasks three times, so 18 runs.
+Each design ran each of six tasks twice, so 12 runs.
 
-| Model | Team: succeeded, of 18 | Single: succeeded, of 18 | Team tokens, average | Single tokens, average | Team seconds, average | Single seconds, average |
+| Model | Team: succeeded, of 12 | Single: succeeded, of 12 | Team cents, average | Single cents, average | Team seconds, average | Single seconds, average |
 | --- | --- | --- | --- | --- | --- | --- |
 | TODO | | | | | | |
 | TODO | | | | | | |
@@ -62,6 +62,6 @@ TODO
 
 Which changed your success rate more: moving from one agent to the team,
 or moving to a different model? Did a team on your cheapest model match
-one agent on your strongest, and at what cost in tokens?
+one agent on your strongest, and at what cost?
 
 TODO

@@ -157,6 +157,44 @@ You may have an AI agent write any of this code. Review each line before
 you commit it, because at the code review you will explain any part you
 are asked about.
 
+## Choosing a task a team is good at
+
+A team costs more than one agent, because each agent reads its own
+instructions and passing work between agents takes extra model calls. It
+pays off when at least one of these is true of your task, and your plan
+says which:
+
+- There is more to read than one conversation handles well, such as
+  hundreds of messages, reviews or records. Workers each read a part in a
+  fresh conversation and return a short summary, so the lead does not hold
+  the raw text.
+- Parts of the work are independent. The lead calls several workers in the
+  same turn, and the SDK runs them at the same time, so the team finishes
+  sooner.
+- Different parts need different models. Reading and sorting can run on a
+  cheap model while the agent that decides runs on a stronger one. Fix an
+  agent to a model with `model=model("glm-5.3-flash")`.
+- A second look catches mistakes. A checker that reads the evidence in its
+  own conversation, without the reasoning behind a proposal, catches what
+  the proposer talked itself into.
+- Some text should not reach the agents that act. Agents that read text
+  from strangers get no tools that change anything.
+
+A Project 2 task with a small data set usually fits in one conversation,
+and one agent does as well there. If you build on it, give the team more to
+work with, such as a semester of records instead of a week.
+
+Tasks that fit:
+
+- A feedback inbox of several hundred messages: count the problems and
+  file reports for the real ones.
+- Reviews of several products or places: compare them one by one, then
+  recommend.
+- Forty paper abstracts: sort them by topic and choose what to read first.
+- A season of game statistics: answer questions that need each game.
+- A city's open data, such as service requests or inspections: summarize
+  by neighborhood and flag patterns worth a closer look.
+
 ## Getting started
 
 1. Accept the assignment, clone your repository, and run `uv sync`.
@@ -196,14 +234,15 @@ you go:
 ```bash
 uv run python src/main.py team "a request, as the person would type it"
 uv run python src/main.py single "the same request"
-uv run python src/main.py eval glm-5.3-flash   # each task, 3 runs each way, on that model
-uv run python src/main.py log                  # runs, average tokens and seconds, by model and task
+uv run python src/main.py eval glm-5.3-flash   # each task, 2 runs each way, on that model
+uv run python src/main.py log                  # runs, tokens, cents and seconds, by model and task
 ```
 
 `team` and `single` run on `glm-5.3-flash` unless `.env` names another
 model with a line such as `MODEL=kimi-k2.6`. Each line of `logs/runs.jsonl`
 records one run: the model, which agents acted, each tool call and its
-result, each handoff, each approval, the tokens used and the time taken.
+result, each handoff, each approval, the tokens each model used, the cost
+in dollars, and the time taken.
 
 ## Choosing three models
 
@@ -227,7 +266,8 @@ List six tasks in `docs/tasks.txt`, one per line, as the person would type
 them. Between them, the tasks include one where you decline a change when
 `ask_person` asks, and one where a guardrail rejects a call. End each line
 that leads to a change with `| approve` or `| decline`, and the evaluation
-gives that answer when the team asks:
+gives that answer when the team asks. A line without one declines any
+change, so you do not answer approvals by hand during the evaluation:
 
 ```text
 Book me the 3pm room on Wednesday. | approve
@@ -241,8 +281,8 @@ together:
 uv run python src/main.py eval glm-5.3-flash kimi-k2.6 deepseek-v4.1-flash
 ```
 
-On each model, it runs each task three times with your team and three
-times with your single agent. A call rejected inside an agent tool shows up
+On each model, it runs each task twice with your team and twice with
+your single agent. A call rejected inside an agent tool shows up
 in that agent's answer rather than as a result in the log, so your single
 agent's runs are where the checks find it. Judge each run in
 `docs/evaluation.md` by the test you set in your plan, and commit
