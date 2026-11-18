@@ -30,9 +30,9 @@ body:
     attributes:
       label: Evaluation, 3 points
       options:
-        - label: Six or more tasks, each run three times with the team and three alone
+        - label: Six or more tasks, each run twice with the team and twice alone, on glm-5.3-flash and one more model
         - label: Success is judged by the test the plan set, and each judgment is backed by the log
-        - label: Tokens and time are compared, and the two quoted runs explain an outcome
+        - label: Cost and time are compared on both models, and the two quoted runs explain an outcome
   - type: input
     attributes:
       label: Evaluation score, out of 3
