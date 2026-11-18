@@ -76,6 +76,8 @@ which is how it runs here on OpenCode Zen.
   function's name, type hints and docstring to decide when to call it and
   with what. If the function raises `ValueError`, the message goes back to
   the model as the result, starting `error:`, so the model can try again.
+  The plain function stays reachable as `.function`, which is how your
+  tests call it: `free_rooms.function("Wednesday")`.
 - `ask_person(question)` asks the person at the keyboard to approve a
   change and returns `True` or `False`. Call it inside any tool that
   changes something, before it acts.
@@ -143,8 +145,9 @@ Project 2 task, data and tool code. All of it goes in `src/team.py`:
 5. `build_single()`, which returns one agent with the same tools as the
    team and no other agents, for the comparison.
 6. Tests of your own, in at least one file in `tests/`, covering each
-   tool and at least one guardrail. Your tests call your tool functions
-   directly, so they make no model calls.
+   tool and at least one guardrail. Your tests call each tool's plain
+   function, such as `free_rooms.function("Wednesday")`, so they make no
+   model calls.
 
 If you work as a team of two, your team has four or more agents and your
 evaluation has eight tasks. Each of you is graded on your own commits and
@@ -184,7 +187,8 @@ you go:
 3. Add the agents one at a time, with `build_team()` returning the lead,
    and try each with `uv run python src/main.py team "..."`. Read the log
    line to see which agents acted.
-4. Write your six tasks in `docs/tasks.txt`, then run the evaluation.
+4. Write your six tasks in `docs/tasks.txt`, then run the evaluation on
+   your three models.
 5. Write `docs/evaluation.md`, then `docs/reflection.md`.
 
 ## Running your team
@@ -192,34 +196,66 @@ you go:
 ```bash
 uv run python src/main.py team "a request, as the person would type it"
 uv run python src/main.py single "the same request"
-uv run python src/main.py eval      # each task in docs/tasks.txt, 3 runs each way
-uv run python src/main.py log       # runs, average tokens and seconds per task
+uv run python src/main.py eval glm-5.3-flash   # each task, 3 runs each way, on that model
+uv run python src/main.py log                  # runs, average tokens and seconds, by model and task
 ```
 
-Each line of `logs/runs.jsonl` records one run: which agents acted, each
-tool call and its result, each handoff, each approval, the tokens used and
-the time taken. The example team used about 3,000 tokens a run, so an
-evaluation of six tasks costs a few cents.
+`team` and `single` run on `glm-5.3-flash` unless `.env` names another
+model with a line such as `MODEL=kimi-k2.6`. Each line of `logs/runs.jsonl`
+records one run: the model, which agents acted, each tool call and its
+result, each handoff, each approval, the tokens used and the time taken.
+
+## Choosing three models
+
+Your key reaches five models on OpenCode Zen. Choose three of them for
+your evaluation, and say why in your plan.
+
+| Model | Input, per million tokens | Output, per million tokens |
+| :---- | ----: | ----: |
+| `glm-5.3-flash` | $0.15 | $0.50 |
+| `deepseek-v4.1-flash` | $0.30 | $1.20 |
+| `minimax-m3` | $0.30 | $1.20 |
+| `kimi-k2.6` | $0.95 | $4.00 |
+| `qwen3.8-max` | $2.00 | $6.00 |
+
+Your key has a monthly budget, so build and test on `glm-5.3-flash`, the
+cheapest, and use the others for the evaluation.
 
 ## Evaluation
 
 List six tasks in `docs/tasks.txt`, one per line, as the person would type
 them. Between them, the tasks include one where you decline a change when
-`ask_person` asks, and one where a guardrail rejects a call. Then run
-`uv run python src/main.py eval`, which runs each task three times with
-your team and three times with your single agent, and answer each approval
-as the task calls for. A call rejected inside an agent tool shows up in
-that agent's answer rather than as a result in the log, so your single
-agent's runs are where the checks find it. Judge each run in `docs/evaluation.md` by the test
-you set in your plan, and commit `logs/runs.jsonl`. To start a fresh log
-for a clean run, delete the file before you begin.
+`ask_person` asks, and one where a guardrail rejects a call. End each line
+that leads to a change with `| approve` or `| decline`, and the evaluation
+gives that answer when the team asks:
+
+```text
+Book me the 3pm room on Wednesday. | approve
+Book me a room on Wednesday afternoon. | decline
+```
+
+Then run the evaluation on each of your three models, one at a time or
+together:
+
+```bash
+uv run python src/main.py eval glm-5.3-flash kimi-k2.6 deepseek-v4.1-flash
+```
+
+On each model, it runs each task three times with your team and three
+times with your single agent. A call rejected inside an agent tool shows up
+in that agent's answer rather than as a result in the log, so your single
+agent's runs are where the checks find it. Judge each run in
+`docs/evaluation.md` by the test you set in your plan, and commit
+`logs/runs.jsonl`. To start a fresh log for a clean run, delete the file
+before you begin.
 
 ## The automated checks
 
 Run the checks yourself with `uv run gatorgrade --config gatorgrade.yml`.
 They also run on GitHub when you push, and they confirm that your team and
 single agent are built as required, that your tests pass, that the log
-holds your evaluation with a declined change and a rejected call, that the
+holds your evaluation on three models with a declined change and a
+rejected call, that the
 style follows the Google Python style guide (`uv run ruff check src
 tests`), and that the documents are complete. The repository needs at least
 15 commits by the due date.

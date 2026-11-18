@@ -17,7 +17,8 @@ def tasks() -> list[str]:
     if not TASKS.exists():
         return []
     lines = TASKS.read_text().splitlines()
-    return [line.strip() for line in lines if line.strip()]
+    requests = [line.partition("|")[0].strip() for line in lines]
+    return [request for request in requests if request]
 
 
 def runs() -> list[dict]:
@@ -34,15 +35,25 @@ def test_six_tasks_are_listed() -> None:
     assert not any("TODO" in task for task in tasks())
 
 
-def test_each_task_ran_three_times_each_way() -> None:
-    """Three team runs and three single-agent runs of each task."""
+def complete_models() -> list[str]:
+    """Models on which each task ran three times with the team and alone."""
+    complete = []
+    for model in dict.fromkeys(r["model"] for r in runs()):
+        mine = [r for r in runs() if r["model"] == model]
+        if all(
+            len([r for r in mine if r["task"] == task and r["design"] == d])
+            >= 3
+            for task in tasks()
+            for d in ("team", "single")
+        ):
+            complete.append(model)
+    return complete
+
+
+def test_each_task_ran_three_times_each_way_on_three_models() -> None:
+    """On three models, three team runs and three single runs of each task."""
     assert tasks(), "docs/tasks.txt lists no tasks"
-    for task in tasks():
-        for design in ("team", "single"):
-            done = [
-                r for r in runs() if r["task"] == task and r["design"] == design
-            ]
-            assert len(done) >= 3, (design, task)
+    assert len(complete_models()) >= 3, complete_models()
 
 
 def test_a_team_run_used_more_than_one_agent() -> None:

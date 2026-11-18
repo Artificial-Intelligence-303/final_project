@@ -48,10 +48,10 @@
   options:
     command: uv run pytest tests/test_session.py::test_six_tasks_are_listed
 
-- description: "[RUN] Each task ran three times with the team and three alone"
+- description: "[RUN] On three models, each task ran three times with the team and three alone"
   check: ExecuteCommand
   options:
-    command: uv run pytest tests/test_session.py::test_each_task_ran_three_times_each_way
+    command: uv run pytest tests/test_session.py::test_each_task_ran_three_times_each_way_on_three_models
 
 - description: "[RUN] A team run used more than one agent"
   check: ExecuteCommand

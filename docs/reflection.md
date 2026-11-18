@@ -4,9 +4,10 @@ Name, or names: TODO
 
 ## Did the team beat one agent?
 
-Use your evaluation table: where did the team do better, where did one
-agent do as well, and what did the team cost in tokens and time? Would you
-build the team again for this task?
+Use your evaluation tables: where did the team do better, where did one
+agent do as well, and what did the team cost in tokens and time? Did the
+answer change from one model to another? Would you build the team again
+for this task, and on which model?
 
 TODO
 

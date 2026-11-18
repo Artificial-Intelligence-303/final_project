@@ -37,5 +37,11 @@ def model_name() -> str:
 def model() -> OpenAIChatCompletionsModel:
     """Return the model to give each Agent you create, as `model=model()`."""
     key = setting("API_KEY") or setting("ZEN_API_KEY") or "no-key-set"
-    client = AsyncOpenAI(base_url=setting("API_URL") or URL, api_key=key)
+    # A request that gets no answer in 60 seconds is tried again, twice.
+    client = AsyncOpenAI(
+        base_url=setting("API_URL") or URL,
+        api_key=key,
+        timeout=60,
+        max_retries=2,
+    )
     return OpenAIChatCompletionsModel(model=model_name(), openai_client=client)

@@ -39,6 +39,13 @@ person first), and the check that rejects a bad call.
 
 TODO
 
+## Your three models
+
+Which three of the five models you will compare, and what you expect each
+to do with your team and with one agent.
+
+TODO
+
 ## Evaluation tasks
 
 A first draft of the six tasks for `docs/tasks.txt`, one line each, and

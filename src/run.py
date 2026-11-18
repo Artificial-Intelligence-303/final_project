@@ -20,6 +20,10 @@ MAX_TURNS = 15
 
 _approvals: list[dict[str, object]] = []
 
+# During an evaluation, main.py sets this to "approve" or "decline" from the
+# task's line in docs/tasks.txt, and ask_person answers with it.
+scripted_answer: str | None = None
+
 
 def ask_person(question: str) -> bool:
     """Ask the person at the keyboard to approve an action; True if they do.
@@ -27,6 +31,11 @@ def ask_person(question: str) -> bool:
     Call this inside any tool that changes something, before it acts. The
     question and the answer are saved with the run.
     """
+    if scripted_answer is not None:
+        approved = scripted_answer == "approve"
+        print(f"\n{question} Approve? [y/n] {'y' if approved else 'n'}")
+        _approvals.append({"question": question, "approved": approved})
+        return approved
     answer = input(f"\n{question} Approve? [y/n] ").strip().lower()
     approved = answer in ("y", "yes")
     _approvals.append({"question": question, "approved": approved})
@@ -49,9 +58,13 @@ def tool(function):
 
     Use it as `@tool` above the function. The function's name, type hints
     and docstring become the tool specification, and a ValueError it raises
-    reaches the model as a result starting "error:".
+    reaches the model as a result starting "error:". The plain function
+    stays reachable as `.function`, so a test can call
+    `save_dinner.function("Monday", "Spinach Dal")`.
     """
-    return function_tool(function, failure_error_function=error_result)
+    made = function_tool(function, failure_error_function=error_result)
+    made.function = function
+    return made
 
 
 def is_agent_tool(candidate: object) -> bool:
