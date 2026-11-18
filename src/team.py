@@ -5,7 +5,7 @@ with type hints and a docstring the model reads. A tool that changes something
 calls `ask_person` before it acts. A tool that rejects a bad call raises
 `ValueError` with a message the model can act on.
 
-`examples/rooms.py` is a finished example of this file's shape.
+`src/example_rooms.py` is a finished example of this file's shape.
 """
 
 from agents import Agent
