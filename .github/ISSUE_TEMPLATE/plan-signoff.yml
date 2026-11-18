@@ -1,6 +1,6 @@
 name: Plan sign-off
 description: Posted by your instructor after reading docs/plan.md, with no part for you to fill in.
-title: "Final Capstone plan sign-off"
+title: "Final Project plan sign-off"
 labels: ["plan sign-off"]
 body:
   - type: markdown
@@ -15,6 +15,7 @@ body:
       options:
         - label: "The task is a real one, for one person, and the three requests are things that person would type."
         - label: "Three or more agents, each with a one-sentence role that says what it does and what it does not do."
+        - label: "The lead agent is described by what it perceives, its actions, its goal and its environment."
         - label: "The connections are named (orchestrator and workers, handoffs, or both), and one agent checks another's work."
         - label: "The reason one agent is not enough names a reason from the README and is specific enough for the evaluation to test."
         - label: "The second model is named, with which agents run on which model."

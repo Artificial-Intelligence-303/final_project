@@ -1,12 +1,12 @@
-# Final Capstone: A Team of Agents
+# Final Project: A Team of Agents
 
 |                     |                                             |
 | :------------------ | :------------------------------------------ |
 | `Thursday 19 Nov`   | Released, in class                          |
 | `Tuesday 24 Nov`    | Plan due, 11:59pm                           |
 | `Tuesday 1 Dec`     | Plan sign-off, in lab                       |
-| `Tuesday 8 Dec`     | Due 9am; presentation and code review       |
-| Points              | 16                                          |
+| `Tuesday 8 Dec`     | Due 9am; presentation and questions         |
+| Points              | 19                                          |
 | Format              | Individual, or a team of two                |
 
 In Challenge 7 and Project 2, Copilot's agent ran the loop and you supplied
@@ -159,11 +159,11 @@ support or feedback inbox. All of it goes in `src/team.py`:
 
 If you work as a team of two, your team has four or more agents and your
 evaluation has eight tasks. Each of you is graded on your own commits and
-on your own answers at the code review.
+on your own answers to questions after the presentation.
 
 You may have an AI agent write any of this code. Review each line before
-you commit it, because at the code review you will explain any part you
-are asked about.
+you commit it, because in the questions after your presentation you will
+explain any part you are asked about.
 
 ## Choosing a task a team is good at
 
@@ -262,7 +262,7 @@ run on which model.
 | `glm-5.3-flash` | $0.15 | $0.50 |
 | `deepseek-v4.1-flash` | $0.30 | $1.20 |
 | `minimax-m3` | $0.30 | $1.20 |
-| `kimi-k2.6` | $0.95 | $4.00 |
+| `glm-5.3` | $1.40 | $4.40 |
 | `qwen3.8-max` | $2.00 | $6.00 |
 
 If a model answers with an error such as 410, it is unavailable for now,
@@ -331,28 +331,57 @@ style follows the Google Python style guide (`uv run ruff check src
 tests`), and that the documents are complete. The repository needs at least
 15 commits by the due date.
 
+## Your presentation
+
+On Tuesday 8 December, each student or pair presents for five minutes, then
+answers about two minutes of questions. A pair presents for seven minutes
+and answers questions for three, and each of you answers some questions on
+your own. Have your repository open in your editor and your log ready, so
+you show your own work rather than slides about it. One slide for the task
+and one for your team is enough.
+
+Show these, in this order:
+
+1. The task and the person: who they are, what they need, and one request
+   they would type.
+2. Your team: each agent, its role, the model it runs on, and how the lead
+   reaches it (as a tool or by handoff). Say which reason from "Choosing a
+   task a team is good at" made a team worth building.
+3. Your code: one tool and its guardrail, and the line where the lead
+   reaches another agent. Say what each does.
+4. One run, step by step: which agent acted, which tool it called, and what
+   came back. Start a live run if it finishes in under a minute; otherwise,
+   open a run in `logs/runs.jsonl` and walk through it.
+5. Your evaluation: the table for each model, and your answer to "The team
+   or the model?"
+
+The questions are about your own work. Expect to be asked to point to a
+line in your code and say what it does, to explain a step in your log, or
+to say what would change if one agent, tool or model changed. You may have
+had an AI agent write your code; you still answer for each line of it.
+
 ## What is due, and when
 
 - **Tuesday 24 November, by 11:59pm:** `docs/plan.md`. The instructor reads
   it and posts a Plan sign-off issue, a checklist in which anything left
   unticked is what to change before you build that part. Questions about it
-  can be settled in lab on Tuesday 1 December.
+  can be settled on Tuesday 1 December, when class and lab are work time
+  for this project.
 - **Tuesday 8 December, 9am**, the final exam period: the finished
-  project, then your presentation: the task and the team, a live run, and
-  your evaluation table. The code review follows, recorded in the Code
-  review issue.
+  project, then your presentation and questions, recorded in the
+  Presentation issue.
 
 ## Evaluation of your work
 
-This project is worth 16 points.
+This project is worth 19 points.
 
 | Component | Value |
 | :-------- | ----: |
 | Implementation | 7 |
-| Evaluation of the team against one agent | 3 |
-| Presentation | 2 |
+| Evaluation of the team against one agent | 4 |
+| Presentation | 3 |
+| Questions about your work | 3 |
 | Written reflection | 2 |
-| Oral component of the code review | 2 |
 
 ## How this project was built
 

@@ -1,7 +1,7 @@
 [project]
-name = "final-capstone-agent-team"
+name = "final-project-agent-team"
 version = "1.0.0"
-description = "CMPSC 303 Final Capstone: a team of agents built with an agent SDK."
+description = "CMPSC 303 Final Project: a team of agents built with an agent SDK."
 requires-python = ">=3.11"
 dependencies = [
     "gatorgrade",

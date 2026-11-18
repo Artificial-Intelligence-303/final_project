@@ -1,4 +1,4 @@
-# Final Capstone: Plan
+# Final Project: Plan
 
 Name, or names if you work as a team of two: TODO
 
@@ -17,6 +17,15 @@ it does not do.
 | Agent | Role | Its tools |
 | --- | --- | --- |
 | TODO | | |
+
+## Your lead agent, as an agent
+
+Describe your lead agent in the terms from Week 2: what it perceives, the
+actions it can take, its goal, and its environment (fully or partly
+observable, deterministic or not, episodic or sequential, static or
+dynamic).
+
+TODO
 
 ## How the agents connect
 

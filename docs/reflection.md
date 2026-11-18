@@ -1,4 +1,4 @@
-# Final Capstone: Reflection
+# Final Project: Reflection
 
 Name, or names: TODO
 
@@ -8,6 +8,15 @@ Use your evaluation tables: where did the team do better, where did one
 agent do as well, and what did the team cost in money and time? Did the
 answer change from one model to another? Would you build the team again
 for this task, and on which model?
+
+TODO
+
+## An idea from earlier in the course
+
+Which idea from before the agent weeks does one of your agents or tools
+use, such as search, logic, probability or expected utility? Name the
+agent or tool, and say what the idea does there. If none does, say where
+one could help.
 
 TODO
 

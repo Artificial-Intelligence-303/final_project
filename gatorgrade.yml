@@ -1,9 +1,9 @@
-# Automated checks for the Final Capstone. Run them yourself with:
+# Automated checks for the Final Project. Run them yourself with:
 #
 #     uv run gatorgrade --config gatorgrade.yml
 #
 # These are the same checks that run on GitHub when you push. They check
-# that the pieces are there. The presentation, the code review and the
+# that the pieces are there. The presentation, the questions and the
 # reflection judge the design, and the final grade is determined by the
 # instructor.
 

@@ -1,14 +1,14 @@
-name: Code review and presentation
-description: Tuesday 8 December. Filled in by the instructor at the presentation and code review.
-title: "Final Capstone code review"
-labels: ["code review"]
+name: Presentation and questions
+description: Tuesday 8 December. Filled in by the instructor at the presentation.
+title: "Final Project presentation"
+labels: ["presentation"]
 body:
   - type: markdown
     attributes:
       value: |
-        Your instructor fills this in at your presentation and code review. You will be asked
-        about parts of your team, including any code an agent wrote for you, and should be able
-        to explain them without looking at them first.
+        Your instructor fills this in at your presentation. After it, you will be asked
+        about parts of your team, including any code an agent wrote for you, and should be
+        able to explain them from your own repository and log.
   - type: checkboxes
     attributes:
       label: Implementation, 7 points
@@ -28,32 +28,50 @@ body:
       required: true
   - type: checkboxes
     attributes:
-      label: Evaluation, 3 points
+      label: Evaluation, 4 points
       options:
         - label: Six or more tasks, each run twice with the team and twice alone, on glm-5.3-flash and one more model
         - label: Success is judged by the test the plan set, and each judgment is backed by the log
         - label: Cost and time are compared on both models, and the two quoted runs explain an outcome
+        - label: '"The team or the model?" is answered from the tables'
   - type: input
     attributes:
-      label: Evaluation score, out of 3
+      label: Evaluation score, out of 4
     validations:
       required: true
   - type: checkboxes
     attributes:
-      label: Presentation, 2 points
+      label: Presentation, 3 points
       options:
-        - label: The task, the team and how its agents connect, explained so a classmate could follow
-        - label: A live run, and the evaluation table with what it shows about team against single agent
+        - label: The task, the person, and the reason a team was worth building
+        - label: Each agent with its role, its model, and how the lead reaches it
+        - label: One tool with its guardrail, and the line where the lead reaches another agent, each explained
+        - label: One run walked through step by step, live or from the log
+        - label: The evaluation tables and what they show
   - type: input
     attributes:
-      label: Presentation score, out of 2
+      label: Presentation score, out of 3
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Questions about your work, 3 points
+      description: Each answer is 3 (explained it from the code or log), 2 (explained it with gaps), 1 (partly), or 0 (could not). The score is the average, rounded to the nearest half point. In a pair, each student is scored on their own answers.
+      value: |
+        | Asked about | Outcome |
+        | --- | --- |
+        |  |  |
+  - type: input
+    attributes:
+      label: Questions score, out of 3
     validations:
       required: true
   - type: checkboxes
     attributes:
       label: Written reflection, 2 points
       options:
-        - label: Whether the team beat one agent is answered from the evaluation table, cost included
+        - label: Whether the team beat one agent is answered from the evaluation tables, cost included
+        - label: An idea from earlier in the course is named in an agent or tool, or where one could help
         - label: A real failure from the log is matched to a kind of multiagent failure and a design change
         - label: Who this could harm names a concrete action, a concrete mistake and the guardrail
         - label: The AI disclosure names the tool, what it was used for, and what was done with the output, or says "none"
@@ -62,16 +80,8 @@ body:
       label: Reflection score, out of 2
     validations:
       required: true
-  - type: textarea
-    attributes:
-      label: Oral component, 2 points
-      description: Outcome is 2 (explained it), 1 (explained it with gaps), or 0 (could not).
-      value: |
-        | Asked about | Outcome |
-        | --- | --- |
-        |  |  |
   - type: input
     attributes:
-      label: Total, out of 16
+      label: Total, out of 19
     validations:
       required: true

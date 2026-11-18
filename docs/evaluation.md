@@ -1,4 +1,4 @@
-# Final Capstone: Evaluation
+# Final Project: Evaluation
 
 Name, or names: TODO
 
