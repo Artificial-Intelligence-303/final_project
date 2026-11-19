@@ -77,6 +77,15 @@ model as a tool named `transfer_to_` and the agent's name.
 The SDK works with any model behind an OpenAI chat completions endpoint,
 which is how it runs here on OpenCode Zen.
 
+The SDK's documentation is at
+[openai.github.io/openai-agents-python](https://openai.github.io/openai-agents-python/).
+The pages on [agents](https://openai.github.io/openai-agents-python/agents/),
+[tools](https://openai.github.io/openai-agents-python/tools/) and
+[handoffs](https://openai.github.io/openai-agents-python/handoffs/) cover
+what this project uses. This project pins version 0.24.0, and its own
+`tool`, `model` and `run` stand in for the SDK's `function_tool`, model
+setup and `Runner`.
+
 ### The files
 
 | File | Yours or provided | What it holds |
