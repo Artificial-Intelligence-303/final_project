@@ -14,7 +14,7 @@ body:
       label: Implementation, 7 points
       description: Checked in the code and by running it.
       options:
-        - label: Three or more agents, each with a written role that matches what it does in the log
+        - label: Three or more agents (four for a team of two, five for a team of three), each with a written role that matches what it does in the log
         - label: The agents connect as the plan says, and one agent checks another's work
         - label: Two or more tools of the team's own, each with a docstring the model can act on
         - label: Each tool that changes something asks the person first
@@ -56,7 +56,7 @@ body:
   - type: textarea
     attributes:
       label: Questions about your work, 3 points
-      description: Each answer is 3 (explained it from the code or log), 2 (explained it with gaps), 1 (partly), or 0 (could not). The score is the average, rounded to the nearest half point. In a pair, each student is scored on their own answers.
+      description: Each answer is 3 (explained it from the code or log), 2 (explained it with gaps), 1 (partly), or 0 (could not). The score is the average, rounded to the nearest half point. In a team, each student is scored on their own answers.
       value: |
         | Asked about | Outcome |
         | --- | --- |

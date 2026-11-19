@@ -1,6 +1,6 @@
 # Final Project: Plan
 
-Name, or names if you work as a team of two: TODO
+Name, or names if you work as a team of two or three: TODO
 
 ## The task
 

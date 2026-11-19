@@ -7,13 +7,33 @@
 | `Tuesday 1 Dec`     | Plan sign-off, in lab                       |
 | `Tuesday 8 Dec`     | Due 9am; presentation and questions         |
 | Points              | 19                                          |
-| Format              | Individual, or a team of two                |
+| Format              | Individual, or a team of two or three       |
 
 In Challenge 7 and Project 2, Copilot's agent ran the loop and you supplied
 the tools. Here you build the agents yourself, with the OpenAI Agents SDK:
 a team of agents with separate roles that works on one task for a person.
 Then you test the claim that a team is worth it, by running the same tasks
 with one agent that has the same tools and comparing the two.
+
+## Contents
+
+- [How the pieces fit](#how-the-pieces-fit)
+  - [The SDK](#the-sdk)
+  - [The files](#the-files)
+  - [What happens on a run](#what-happens-on-a-run)
+- [What you build](#what-you-build)
+- [Choosing a task a team is good at](#choosing-a-task-a-team-is-good-at)
+- [Getting started](#getting-started)
+- [Running your team](#running-your-team)
+- [Choosing your second model](#choosing-your-second-model)
+- [Evaluation](#evaluation)
+  - [Planning your time and budget](#planning-your-time-and-budget)
+- [The automated checks](#the-automated-checks)
+- [Your presentation](#your-presentation)
+- [What is due, and when](#what-is-due-and-when)
+- [Evaluation of your work](#evaluation-of-your-work)
+- [How this project was built](#how-this-project-was-built)
+- [AI use on this project](#ai-use-on-this-project)
 
 ## How the pieces fit
 
@@ -92,8 +112,8 @@ which is how it runs here on OpenCode Zen.
 In `uv run python src/main.py team "a request"`, the text in quotes is the
 request: one of the requests from `docs/tasks.txt` without the `| approve`
 or `| decline` at the end. `team` and `single` run one request so you can
-try it while you build; `eval` reads every request from `docs/tasks.txt`
-itself.
+try it while you build. `eval` does read every request from
+`docs/tasks.txt`, and the session test checks the log it writes.
 
 That command does this:
 
@@ -163,9 +183,14 @@ support or feedback inbox. All of it goes in `src/team.py`:
    function, such as `read_tickets.function(1, 3)`, so they make no
    model calls.
 
-If you work as a team of two, your team has four or more agents and your
-evaluation has eight tasks. Each of you is graded on your own commits and
-on your own answers to questions after the presentation.
+A team of two builds four or more agents, and a team of three builds five
+or more. The evaluation has six tasks however many of you there are. Each
+of you is graded on your own commits and on your own answers to questions
+after the presentation.
+
+If you work in a team, each of you works on your own branch and merges it
+into `main` with a pull request. Run the evaluation on `main` after your
+branches are merged, so that `logs/runs.jsonl` is written in one place.
 
 You may have an AI agent write any of this code. Review each line before
 you commit it, because in the questions after your presentation you will
@@ -339,10 +364,10 @@ tests`), and that the documents are complete. The repository needs at least
 
 ## Your presentation
 
-On Tuesday 8 December, each student or pair presents for five minutes, then
-answers about two minutes of questions. A pair presents for seven minutes
-and answers questions for three, and each of you answers some questions on
-your own. Have your repository open in your editor and your log ready, so
+On Tuesday 8 December, a student working alone presents for five minutes,
+then answers about two minutes of questions. A team of two presents for
+seven minutes and a team of three for nine, each followed by about three
+minutes of questions, and each of you answers some questions on your own. Have your repository open in your editor and your log ready, so
 you show your own work rather than slides about it. One slide for the task
 and one for your team is enough.
 
