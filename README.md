@@ -89,12 +89,11 @@ which is how it runs here on OpenCode Zen.
 
 ### What happens on a run
 
-In `uv run python src/main.py team "a request"`, the text in quotes is
-the request: the task your team should do, written the way the person
-using it would ask. For the provided inbox team, a request is
-`"How many messages report a crash?"`. Your requests are your own tasks,
-the same lines you write in `docs/tasks.txt` without the `| approve` or
-`| decline` at the end.
+In `uv run python src/main.py team "a request"`, the text in quotes is the
+request: one of the requests from `docs/tasks.txt` without the `| approve`
+or `| decline` at the end. `team` and `single` run one request so you can
+try it while you build; `eval` reads every request from `docs/tasks.txt`
+itself.
 
 That command does this:
 
