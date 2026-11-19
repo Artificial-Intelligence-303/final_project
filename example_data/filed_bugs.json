@@ -1,7 +1,7 @@
 [
  {
   "id": "BUG-12",
-  "title": "Sign in fails: two-step codes arrive late or never",
+  "title": "Sign-in problems: login errors, sign-in loops, forced sign-outs, and late two-step codes",
   "tickets": "filed last month"
  }
 ]
