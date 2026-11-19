@@ -364,12 +364,11 @@ tests`), and that the documents are complete. The repository needs at least
 
 ## Your presentation
 
-On Tuesday 8 December, a student working alone presents for five minutes,
-then answers about two minutes of questions. A team of two presents for
-seven minutes and a team of three for nine, each followed by about three
-minutes of questions, and each of you answers some questions on your own. Have your repository open in your editor and your log ready, so
-you show your own work rather than slides about it. One slide for the task
-and one for your team is enough.
+On Tuesday 8 December, each student or team presents for five minutes,
+then answers questions about the work. In a team, each of you answers some
+questions on your own. Have your repository open in your editor and your
+log ready, so you show your own work rather than slides about it. One
+slide for the task and one for your team is enough.
 
 Show these, in this order:
 
