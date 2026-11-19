@@ -89,12 +89,19 @@ which is how it runs here on OpenCode Zen.
 
 ### What happens on a run
 
-`uv run python src/main.py team "a request"` does this:
+In `uv run python src/main.py team "a request"`, the text in quotes is
+the request: the task your team should do, written the way the person
+using it would ask. For the provided inbox team, a request is
+`"How many messages report a crash?"`. Your requests are your own tasks,
+the same lines you write in `docs/tasks.txt` without the `| approve` or
+`| decline` at the end.
+
+That command does this:
 
 1. `main.py` calls your `build_team()`, which creates the agents and
    returns the lead.
 2. `main.py` passes the lead and the request to `run`.
-3. `run` hands both to the SDK's `Runner`, which starts the loop with the
+3. `run` passes both to the SDK's `Runner`, which starts the loop with the
    lead agent.
 4. On each turn, the model reads the active agent's instructions, the
    conversation so far, and its tools, then either calls a tool, calls an
@@ -244,8 +251,8 @@ uv run python src/main.py eval glm-5.3-flash   # each task, 2 runs each way, on 
 uv run python src/main.py log                  # runs, tokens, cents and seconds, by model and task
 ```
 
-`team` and `single` run on `glm-5.3-flash` unless `.env` names another
-model with a line such as `MODEL=minimax-m3`. An agent fixed to a model
+**The default model is `glm-5.3-flash`.** `team` and `single` run on it
+unless `.env` names another model with a line such as `MODEL=minimax-m3`. An agent fixed to a model
 with `model("...")` stays on it. Each line of `logs/runs.jsonl`
 records one run: the model, which agents acted, each tool call and its
 result, each handoff, each approval, the tokens each model used, the cost
