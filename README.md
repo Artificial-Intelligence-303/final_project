@@ -418,7 +418,7 @@ This project is worth 19 points.
 I chose the project's design: a team built with an agent SDK and compared
 against a single agent, and wrote the starter code. One Claude agent modified my code to adhere to Google Python style guide, wrote the the example team code,
 the tests and the checks, and drafted
-this README, which I reviewed. I ran the example on real models and verified its correctness.
+this README, which I reviewed and edited. I ran the example on real models and verified its correctness.
 
 ## AI use on this project
 
