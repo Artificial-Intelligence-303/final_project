@@ -4,7 +4,6 @@
 | :------------------ | :------------------------------------------ |
 | `Thursday 19 Nov`   | Released, in class                          |
 | `Tuesday 24 Nov`    | Plan due, 11:59pm                           |
-| `Tuesday 1 Dec`     | Plan sign-off, in lab                       |
 | `Tuesday 8 Dec`     | Due 9am; presentation and questions         |
 | Points              | 19                                          |
 | Format              | Individual, or two or three students        |
@@ -396,9 +395,8 @@ had an AI agent write your code; you still answer for each line of it.
 
 - **Tuesday 24 November, by 11:59pm:** `docs/plan.md`. The instructor reads
   it and posts a Plan sign-off issue, a checklist in which anything left
-  unticked is what to change before you build that part. You can ask about
-  it on Tuesday 1 December, when class and lab are work time
-  for this project.
+  unticked is what to change before you build that part. You do not need
+  to wait for it to start building.
 - **Tuesday 8 December, 9am**, the final exam period: the finished
   project, then your presentation and questions. The instructor or a TL
   posts a Presentation issue with your scores for both after you present.
