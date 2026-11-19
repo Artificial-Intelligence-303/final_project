@@ -1,27 +1,27 @@
 name: Plan sign-off
-description: Posted by your instructor after reading docs/plan.md, with no part for you to fill in.
+description: Posted by your instructor after reading your docs/plan.md.
 title: "Final Project plan sign-off"
 labels: ["plan sign-off"]
 body:
   - type: markdown
     attributes:
       value: |
-        Your instructor posts this after reading your `docs/plan.md`. It is not graded, and there
-        is no part for you to fill in. A ticked box is a part of the plan that is settled, and
-        anything left unticked is what to change before you build that part.
+        Your instructor posts this issue after reading your `docs/plan.md`. It is not graded, and
+        you do not need to fill anything in. A ticked box means that part of your plan is ready to
+        build. An unticked box shows what to change before you build that part.
   - type: checkboxes
     attributes:
       label: The plan
       options:
-        - label: "The task is a real one, for one person, and the three requests are things that person would type."
-        - label: "Three or more agents (four for a team of two, five for a team of three), each with a one-sentence role that says what it does and what it does not do."
+        - label: "The task is work that one person actually does, and the three requests are what that person would type."
+        - label: "Three or more agents (four or more for two students, five or more for three), each with a one-sentence role that says what it does and what it leaves to the others."
         - label: "The lead agent is described by what it perceives, its actions, its goal and its environment."
-        - label: "The connections are named (orchestrator and workers, handoffs, or both), and one agent checks another's work."
-        - label: "The reason one agent is not enough names a reason from the README and is specific enough for the evaluation to test."
-        - label: "The second model is named, with which agents run on which model."
-        - label: "Two or more tools of the team's own; each tool that changes something asks the person first."
-        - label: "Each guardrail is a check in a tool, with the error the model reads."
-        - label: "The six evaluation tasks include a change the person declines and a call a guardrail rejects, and each says how success is judged."
+        - label: "The plan names how the agents connect (orchestrator and workers, handoffs, or both), and one agent checks another's work."
+        - label: "The reason one agent is not enough comes from the README and is specific enough for the evaluation to test."
+        - label: "The second model is named, along with which agents run on which model."
+        - label: "Two or more tools you write yourself, and each tool that changes something asks the person first."
+        - label: "Each guardrail is a check in a tool, with the error message the model reads."
+        - label: "The six evaluation tasks include a change the person declines and a call a guardrail rejects, each agent acts in at least one task, and each task says how success is judged."
   - type: textarea
     attributes:
       label: Notes

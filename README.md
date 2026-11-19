@@ -7,12 +7,12 @@
 | `Tuesday 1 Dec`     | Plan sign-off, in lab                       |
 | `Tuesday 8 Dec`     | Due 9am; presentation and questions         |
 | Points              | 19                                          |
-| Format              | Individual, or a team of two or three       |
+| Format              | Individual, or two or three students        |
 
 In Challenge 7 and Project 2, Copilot's agent ran the loop and you supplied
 the tools. Here you build the agents yourself, with the OpenAI Agents SDK:
-a team of agents with separate roles that works on one task for a person.
-Then you test the claim that a team is worth it, by running the same tasks
+an agent team, several agents with separate roles that work on one task
+for a person. Then you test the claim that an agent team is worth it, by running the same tasks
 with one agent that has the same tools and comparing the two.
 
 ## Contents
@@ -22,9 +22,9 @@ with one agent that has the same tools and comparing the two.
   - [The files](#the-files)
   - [What happens on a run](#what-happens-on-a-run)
 - [What you build](#what-you-build)
-- [Choosing a task a team is good at](#choosing-a-task-a-team-is-good-at)
+- [Choosing a task an agent team is good at](#choosing-a-task-an-agent-team-is-good-at)
 - [Getting started](#getting-started)
-- [Running your team](#running-your-team)
+- [Running your agent team](#running-your-agent-team)
 - [Choosing your second model](#choosing-your-second-model)
 - [Evaluation](#evaluation)
   - [Planning your time and budget](#planning-your-time-and-budget)
@@ -85,11 +85,11 @@ which is how it runs here on OpenCode Zen.
 | `src/team.py` | yours | your tools, your agents, `build_team()` and `build_single()` |
 | `tests/test_*.py` of your own | yours | tests of your tools that call them directly, with no model calls |
 | `docs/plan.md`, `docs/tasks.txt`, `docs/evaluation.md`, `docs/reflection.md` | yours | the plan, the six tasks, the comparison, the reflection |
-| `src/example_inbox.py`, `example_data/` | provided, to read | a finished team that sorts a support inbox, in the shape your `team.py` takes |
+| `src/example_inbox.py`, `example_data/` | provided, to read | a finished agent team that sorts a support inbox, in the shape your `team.py` takes |
 | `src/model.py` | provided | `model()`, which returns the model to give each agent, using your key in `.env`, and counts each model's tokens |
 | `src/run.py` | provided | `tool`, `ask_person` and `run`, described below |
 | `src/main.py` | provided | the commands that run one task, run the evaluation, and summarize the log |
-| `tests/test_team.py`, `tests/test_session.py` | provided, do not edit | checks on how your team is built and on your evaluation log |
+| `tests/test_team.py`, `tests/test_session.py` | provided, do not edit | checks on how your agent team is built and on your evaluation log |
 
 `src/run.py` holds the three functions you use from your own code:
 
@@ -128,7 +128,7 @@ That command does this:
 5. When the model answers in plain text, the loop ends, and `run` writes
    the log line and returns the answer.
 
-The example team has three agents. The lead splits the inbox into six
+The example agent team has three agents. The lead splits the inbox into six
 batches of 50 messages and calls the reader once for each batch. The
 reader, fixed to `glm-5.3-flash`, sorts its batch and returns counts, and
 the lead adds them up. A checker confirms a bug before the lead files it.
@@ -158,7 +158,7 @@ agent tools and no handoffs.
 
 ## What you build
 
-A team for a real task, one a person actually does. You may build on your
+An agent team for a real task, one a person actually does. You may build on your
 Project 2 task, data and tool code. Your task cannot be the example's, a
 support or feedback inbox. All of it goes in `src/team.py`:
 
@@ -177,28 +177,28 @@ support or feedback inbox. All of it goes in `src/team.py`:
      `ValueError` with a message the model can act on.
    - The step limit in `run`, which is provided.
 5. `build_single()`, which returns one agent with the same tools as the
-   team and no other agents, for the comparison.
+   agent team and no other agents, for the comparison.
 6. Tests of your own, in at least one file in `tests/`, covering each
    tool and at least one guardrail. Your tests call each tool's plain
    function, such as `read_tickets.function(1, 3)`, so they make no
    model calls.
 
-A team of two builds four or more agents, and a team of three builds five
-or more. The evaluation has six tasks however many of you there are. Each
-of you is graded on your own commits and on your own answers to questions
-after the presentation.
+If two students work together, they build four or more agents, and three
+students build five or more. The evaluation has six tasks however many of
+you there are. Each of you is graded on your own commits and on your own
+answers to questions after the presentation.
 
-If you work in a team, each of you works on your own branch and merges it
-into `main` with a pull request. Run the evaluation on `main` after your
+If you work with classmates, each of you works on your own branch and
+merges it into `main` with a pull request. Run the evaluation on `main` after your
 branches are merged, so that `logs/runs.jsonl` is written in one place.
 
 You may have an AI agent write any of this code. Review each line before
 you commit it, because in the questions after your presentation you will
 explain any part you are asked about.
 
-## Choosing a task a team is good at
+## Choosing a task an agent team is good at
 
-A team costs more than one agent, because each agent reads its own
+An agent team costs more than one agent, because each agent reads its own
 instructions and passing work between agents takes extra model calls. It
 pays off when at least one of these is true of your task, and your plan
 says which:
@@ -208,8 +208,8 @@ says which:
   fresh conversation and return a short summary, so the lead does not hold
   the raw text.
 - Parts of the work are independent. The lead calls several workers in the
-  same turn, and the SDK runs them at the same time, so the team finishes
-  sooner.
+  same turn, and the SDK runs them at the same time, so the agent team
+  finishes sooner.
 - Different parts need different models. Reading and sorting can run on a
   cheap model while the agent that decides runs on a stronger one. Fix an
   agent to a model with `model=model("glm-5.3-flash")`.
@@ -220,8 +220,8 @@ says which:
   from strangers get no tools that change anything.
 
 A Project 2 task with a small data set usually fits in one conversation,
-and one agent does as well there. If you build on it, give the team more to
-work with, such as a semester of records instead of a week.
+and one agent does as well there. If you build on it, give the agent team
+more to work with, such as a semester of records instead of a week.
 
 Tasks that fit:
 
@@ -238,7 +238,7 @@ Tasks that fit:
 2. Copy `.env` from your Challenge 8 folder to the top of this repository.
    It holds one line, `ZEN_API_KEY=` followed by your key, and git leaves
    it out of your commits.
-3. Run the example as a team and as a single agent:
+3. Run the example as an agent team and as a single agent:
 
    ```bash
    uv run python src/example_inbox.py team "How many messages report a crash?"
@@ -266,7 +266,7 @@ you go:
    your two models.
 5. Write `docs/evaluation.md`, then `docs/reflection.md`.
 
-## Running your team
+## Running your agent team
 
 ```bash
 uv run python src/main.py team "a request, as the person would type it"
@@ -285,8 +285,8 @@ in dollars, and the time taken.
 ## Choosing your second model
 
 Your evaluation runs on two models: `glm-5.3-flash`, the cheapest, and one
-more of your choice. Say which in your plan, and which agents on your team
-run on which model.
+more of your choice. Say which in your plan, and which agents on your agent
+team run on which model.
 
 | Model | Input, per million tokens | Output, per million tokens |
 | :---- | ----: | ----: |
@@ -302,10 +302,11 @@ so choose another. Build and test on `glm-5.3-flash`.
 ## Evaluation
 
 List six tasks in `docs/tasks.txt`, one per line, as the person would type
-them. Between them, the tasks include one where you decline a change when
-`ask_person` asks, and one where a guardrail rejects a call. End each line
+them. Each agent acts in at least one of your six tasks. Between them, the
+tasks include one where you decline a change when `ask_person` asks, and
+one where a guardrail rejects a call. End each line
 that leads to a change with `| approve` or `| decline`, and the evaluation
-gives that answer when the team asks. A line without one declines any
+gives that answer when an agent asks. A line without one declines any
 change, so you do not answer approvals by hand during the evaluation:
 
 ```text
@@ -320,8 +321,8 @@ Then run the evaluation on your two models, one at a time or together:
 uv run python src/main.py eval glm-5.3-flash minimax-m3
 ```
 
-On each model, it runs each task twice with your team and twice with
-your single agent, so 24 runs a model. A call rejected inside an agent
+On each model, it runs each task twice with your agent team and twice
+with your single agent, so 24 runs a model. A call rejected inside an agent
 tool shows up in that agent's answer rather than as a result in the log,
 so your single agent's runs are where the checks find it. Judge each run
 in `docs/evaluation.md` by the test you set in your plan, and commit
@@ -334,7 +335,7 @@ The runs take real time, and your key has a monthly budget, so start the
 evaluation early enough to run it twice.
 
 - Time: on the example's tasks, a run took about 25 to 70 seconds on
-  `glm-5.3-flash`. On `qwen3.8-max`, a team run took about 45 seconds and
+  `glm-5.3-flash`. On `qwen3.8-max`, an agent team run took about 45 seconds and
   a single-agent run up to three and a half minutes. Time two of your own
   runs with `main.py team` and `main.py single`, then multiply by 24 for
   each model. Plan for a second evaluation after you fix something, and
@@ -342,7 +343,7 @@ evaluation early enough to run it twice.
   about it.
 - Budget: your key can spend $5 a month, and the December budget starts
   on 1 December. On the example's tasks, a run cost about 1 cent on
-  `glm-5.3-flash`. On `qwen3.8-max`, a team run with its readers on
+  `glm-5.3-flash`. On `qwen3.8-max`, an agent team run with its readers on
   `glm-5.3-flash` cost about 4 cents and a single-agent run about 20 cents.
   `uv run python src/main.py log` shows the cents per run, so after a few
   runs you can estimate the rest. If your key reaches its budget, the
@@ -354,8 +355,8 @@ evaluation early enough to run it twice.
 ## The automated checks
 
 Run the checks yourself with `uv run gatorgrade --config gatorgrade.yml`.
-They also run on GitHub when you push, and they confirm that your team and
-single agent are built as required, that your tests pass, that the log
+They also run on GitHub when you push, and they confirm that your agent team
+and single agent are built as required, that your tests pass, that the log
 holds your evaluation on two models with a declined change and a
 rejected call, that the
 style follows the Google Python style guide (`uv run ruff check src
@@ -364,19 +365,20 @@ tests`), and that the documents are complete. The repository needs at least
 
 ## Your presentation
 
-On Tuesday 8 December, each student or team presents for five minutes,
-then answers questions about the work. In a team, each of you answers some
-questions on your own. Have your repository open in your editor and your
+On Tuesday 8 December, each student, or each group of students working
+together, presents for five minutes, then answers questions about the work.
+If you work with classmates, each of you answers some questions on your
+own. Have your repository open in your editor and your
 log ready, so you show your own work rather than slides about it. One
-slide for the task and one for your team is enough.
+slide for the task and one for your agent team is enough.
 
 Show these, in this order:
 
 1. The task and the person: who they are, what they need, and one request
    they would type.
-2. Your team: each agent, its role, the model it runs on, and how the lead
+2. Your agent team: each agent, its role, the model it runs on, and how the lead
    reaches it (as a tool or by handoff). Say which reason from "Choosing a
-   task a team is good at" made a team worth building.
+   task an agent team is good at" made an agent team worth building.
 3. Your code: one tool and its guardrail, and the line where the lead
    reaches another agent. Say what each does.
 4. One run, step by step: which agent acted, which tool it called, and what
@@ -394,12 +396,12 @@ had an AI agent write your code; you still answer for each line of it.
 
 - **Tuesday 24 November, by 11:59pm:** `docs/plan.md`. The instructor reads
   it and posts a Plan sign-off issue, a checklist in which anything left
-  unticked is what to change before you build that part. Questions about it
-  can be settled on Tuesday 1 December, when class and lab are work time
+  unticked is what to change before you build that part. You can ask about
+  it on Tuesday 1 December, when class and lab are work time
   for this project.
 - **Tuesday 8 December, 9am**, the final exam period: the finished
-  project, then your presentation and questions, recorded in the
-  Presentation issue.
+  project, then your presentation and questions. The instructor or a TL
+  posts a Presentation issue with your scores for both after you present.
 
 ## Evaluation of your work
 
@@ -408,15 +410,15 @@ This project is worth 19 points.
 | Component | Value |
 | :-------- | ----: |
 | Implementation | 7 |
-| Evaluation of the team against one agent | 4 |
+| Evaluation of the agent team against one agent | 4 |
 | Presentation | 3 |
 | Questions about your work | 3 |
 | Written reflection | 2 |
 
 ## How this project was built
 
-I chose the project's design: a team built with an agent SDK and compared
-against a single agent, and wrote the starter code. One Claude agent modified my code to adhere to Google Python style guide, wrote the the example team code,
+I chose the project's design: an agent team built with an agent SDK and compared
+against a single agent, and wrote the starter code. One Claude agent modified my code to adhere to Google Python style guide, wrote the example agent team code,
 the tests and the checks, and drafted
 this README, which I reviewed and edited. I ran the example on real models and verified its correctness.
 

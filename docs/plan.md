@@ -1,15 +1,15 @@
 # Final Project: Plan
 
-Name, or names if you work as a team of two or three: TODO
+Name, or names if you work with classmates: TODO
 
 ## The task
 
-Who the team works for, what that person needs done, and three requests
+Who the agent team works for, what that person needs done, and three requests
 they would type to it. You may build on your Project 2 task and data.
 
 TODO
 
-## Your team
+## Your agent team
 
 One row per agent. The role is one sentence: what this agent does, and what
 it does not do.
@@ -36,8 +36,8 @@ TODO
 
 ## Why one agent is not enough
 
-Which reason from "Choosing a task a team is good at" in the README fits
-your task, what you expect the team to do better than one agent with the
+Which reason from "Choosing a task an agent team is good at" in the README fits
+your task, what you expect the agent team to do better than one agent with the
 same tools, and what you expect it to cost. Your evaluation tests this.
 
 TODO
@@ -51,7 +51,7 @@ TODO
 
 ## Your second model
 
-Which model you will compare with glm-5.3-flash, which agents on your team
+Which model you will compare with glm-5.3-flash, which agents on your agent team
 run on which model, and what you expect each design to do on each model.
 
 TODO
